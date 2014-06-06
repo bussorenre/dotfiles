@@ -21,7 +21,7 @@ set statusline=[%L]\ %t\ %y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%r%m%=%c:%l/
 
 
 "=== インデント設定 ==="
-set autoindent		" 自動でインデンテーションする
+"set autoindent		" 自動でインデンテーションする
 set shiftwidth=4	" タブ幅４
 set tabstop=4		" タブ幅４
 set expandtab		" タブをスペースに変える
