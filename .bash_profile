@@ -2,7 +2,11 @@
 export CLICOLOR=1
 export LSCOLORS=GxFxcxdxCxegedabagacad
 
-# PATh settings for homebrew
-export PATH=/usr/local/bin:$PATH
-[[ -s "/Users/ryo1/.gvm/scripts/gvm" ]] && source "/Users/ryo1/.gvm/scripts/gvm"
+# for Go lang
+[[ -s "/Users/ryo/.gvm/scripts/gvm" ]] && source "/Users/ryo/.gvm/scripts/gvm"
 
+# GOPATH
+GOPATH=~/bussorenre/golang
+
+# PATh settings for homebrew and GOPATH
+PATH=/usr/local/bin:$PATH:$GOPATH/bin
