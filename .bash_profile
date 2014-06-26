@@ -11,8 +11,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # GOPATH
 GOPATH=~/bussorenre/golang
 
-
-# PATh settings for homebrew
+# PATh settings for homebrew and GOPATH
 PATH=/usr/local/bin:$PATH:$GOPATH/bin
 
 # PATH settings for MacTex
