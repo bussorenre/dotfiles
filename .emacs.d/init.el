@@ -1,6 +1,4 @@
-(set-locale-environment "utf-8")
-(setenv "LANG"  "ja_JP.UTF-8")
-
+(prefer-coding-system 'utf-8)
 
 (add-to-list 'load-path "~/.emacs.d/config/")
 
