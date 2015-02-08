@@ -41,25 +41,19 @@ set nocompatible
 
 " ここから先はNeoBundle だ！
 " 大人しく、元に世界に引替しやがれ！この三下が！
-
 filetype plugin indent off
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
+    set runtimepath+=~/.vim/bundle/neobundle.vim
+    call neobundle#begin(expand('~/.vim/bundle'))
 endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+
+
+
+
+" NeoBundleを終了させる 
 call neobundle#end()
-
 filetype plugin indent on
-
-NeoBundleCheck
-
-
-
-"=== 以下vimrcのコマンド練習==="
-
-
