@@ -26,11 +26,18 @@ set shiftwidth=4	" タブ幅４
 set tabstop=4		" タブ幅４
 set expandtab		" タブをスペースに変える
 
+augroup vimrc
+    autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+    autocmd! FileType css  setlocal shiftwidth=4 tabstop=2 softtabstop=2
+augroup END
 
 
 "=== カラースキーマ ==="
 colorscheme molokai
 
+
+set backspace=indent,eol,start
 
 
 "=== vi 互換モードをオフにする ==="
@@ -39,7 +46,7 @@ set nocompatible
 
 
 
-" ここから先はNeoBundle だ！
+"=== ここから先はNeoBundle だ！ ==="
 " 大人しく、元に世界に引替しやがれ！この三下が！
 filetype plugin indent off
 
@@ -52,8 +59,23 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 
+" プラグインを読み込む"
+"NeoBundle 'Shougo/unite.vim'
+NeoBundle 'scrooloose/nerdtree'
 
 
-" NeoBundleを終了させる 
+
+"=== 起動時の設定を色々とオンにする ==="
+"autocmd vimenter * NERDTree
+
+
+
+
+
+
+
+
+
+"=== NeoBundleを終了させる ==="
 call neobundle#end()
 filetype plugin indent on
