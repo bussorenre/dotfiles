@@ -43,11 +43,7 @@ set backspace=indent,eol,start
 "=== vi 互換モードをオフにする ==="
 set nocompatible
 
-
-
-
-"=== ここから先はNeoBundle だ！ ==="
-" 大人しく、元に世界に引替しやがれ！この三下が！
+"=== ここから先こそがneobundle だ！！（( TДT)"
 filetype plugin indent off
 
 if has('vim_starting')
@@ -56,26 +52,9 @@ if has('vim_starting')
 endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
-
-
-
-" プラグインを読み込む"
-"NeoBundle 'Shougo/unite.vim'
-NeoBundle 'scrooloose/nerdtree'
-
-
-
-"=== 起動時の設定を色々とオンにする ==="
-"autocmd vimenter * NERDTree
-
-
-
-
-
-
-
-
-
-"=== NeoBundleを終了させる ==="
 call neobundle#end()
+
 filetype plugin indent on
+
+
+
