@@ -44,17 +44,17 @@ set backspace=indent,eol,start
 set nocompatible
 
 "=== ここから先こそがneobundle だ！！（( TДT)"
-filetype plugin indent off
+"filetype plugin indent off
 
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim
-    call neobundle#begin(expand('~/.vim/bundle'))
-endif
+"if has('vim_starting')
+"    set runtimepath+=~/.vim/bundle/neobundle.vim
+"    call neobundle#begin(expand('~/.vim/bundle'))
+"endif
 
-NeoBundleFetch 'Shougo/neobundle.vim'
-call neobundle#end()
+"NeoBundleFetch 'Shougo/neobundle.vim'
+"call neobundle#end()
 
-filetype plugin indent on
+"filetype plugin indent on
 
 
 
