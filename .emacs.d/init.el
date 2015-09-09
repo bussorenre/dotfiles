@@ -15,8 +15,19 @@
 ;; (require 'auto-save-buffers)
 ;; (run-with-idle-timer 1.0 t 'auto-save-buffers) ; アイドル1.0秒で保存
 
-;; markdown プレビューを有効化する
-(setq markdown-command "multimarkdown")
+;; 対応するカッコを強調表示
+(show-paren-mode t)
+
+;; 時間も表示させる。
+(display-time)
+
+;; 行番号を常に表示させる
+(global-linum-mode)
+(setq linum-format "%4d ")
+
+;; テーマを設定する
+(load-theme 'manoj-dark t)
 
 
+;; キーバインドの変更
 (keyboard-translate ?\C-h ?\C-?)
