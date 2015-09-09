@@ -16,3 +16,6 @@ PATH=/usr/local/bin:$PATH:$GOPATH/bin
 
 # PATH settings for MacTex
 PATH=/usr/texbin/:$PATH
+
+# emacs 短縮エイリアス
+alias e='emacs'

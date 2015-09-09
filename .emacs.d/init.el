@@ -14,3 +14,9 @@
 
 ;; (require 'auto-save-buffers)
 ;; (run-with-idle-timer 1.0 t 'auto-save-buffers) ; アイドル1.0秒で保存
+
+;; markdown プレビューを有効化する
+(setq markdown-command "multimarkdown")
+
+
+(keyboard-translate ?\C-h ?\C-?)
