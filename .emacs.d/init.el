@@ -6,9 +6,10 @@
 (prefer-coding-system 'utf-8-unix)
 
 
-(setq auto-save-timeout 1)   ; 自動保存する間隔。秒。
-(setq auto-save-interval 10) ; 300打鍵ごとに自動保存
-(setq create-lockfiles nil)  ; ロックファイルを作成しない。
+;; ロックファイル / バックアップファイルを作成しない
+(setq create-lockfiles nil)
+(setq make-backup-files nil)
+(setq delete-auto-save-files t)
 
 
 ;; 対応するカッコを強調表示
@@ -21,22 +22,43 @@
 (global-linum-mode)
 (setq linum-format "%4d ")
 
+;; 現在行を目立たせる
+(setq hl-line-face 'underline)
+(global-hl-line-mode)
+
 ;; テーマを設定する
 (load-theme 'manoj-dark t)
-
 
 ;; キーバインドの変更
 (keyboard-translate ?\C-h ?\C-?)
 
 ;; Cmd をメタキーに
 (when (eq system-type 'darwin)
-    (setq ns-command -modifier (quote meta))
-    )
+    (setq ns-command-modifier (quote meta)))
 
 ;; パッケージ管理の初期化
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
+(add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
+
+
+
+
+;; ==================================================
+;; Auto Complete
+;; ==================================================
+(require 'auto-complete-config)
+(ac-config-default)
+(ac-set-trigger-key "TAB")
+(global-auto-complete-mode t)
+
+
+;; ==================================================
+;; Undo-tree
+;; ==================================================
+(require 'undo-tree)
+(global-undo-tree-mode t)
+(global-set-key (kbd "M-/") 'undo-tree-redo)
 
 
