@@ -74,3 +74,34 @@
 	     '((regexp-quote (system-name)) nil nil))
 
 
+
+
+;; =================================================
+;; cc-mode 
+;; =================================================
+(require 'cc-mode)
+(add-hook 'c-mode-common-hook
+	  '(lambda ()
+	    (setq c-default-style "linux") ; Linux Kernel のコーディング規約に従う
+	    (setq indent-tabs-mode nil)    ; タブを利用しない
+	    (setq c-basic-offset 4)        ; tabサイズを4にする
+	    (setq tab-width 4)
+	    (define-key c-mode-map (kbd "<f6>") 'man)
+	    )
+	  )
+
+;; =================================================
+;; auto-complete-c-headers
+;; =================================================
+(defun my:ac-c-headers-init ()
+  (require 'auto-complete-c-headers)
+  (add-to-list 'ac-sources 'ac-source-c-headers))
+
+(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
+(add-hook 'c-mode-hook 'my:ac-c-headers-init)
+
+
+
+;; ==================================================
+;; function-args
+;; ==================================================
