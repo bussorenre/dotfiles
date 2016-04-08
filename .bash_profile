@@ -24,3 +24,11 @@ alias e='emacs'
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# gnu global
+funcs()
+{
+    local cur
+    cur=${COMP_WORDS[COMP_CWORD]}
+    COMPREPLY=(`global -c $cur`)
+}
