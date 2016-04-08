@@ -1,2 +1,2 @@
-(load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init")))
+(load (expand-file-name (concat (getenv "HOME") "/.emacs.d/init.el")))
 

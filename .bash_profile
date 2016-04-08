@@ -19,3 +19,8 @@ PATH=/usr/texbin/:$PATH
 
 # emacs 短縮エイリアス
 alias e='emacs'
+
+# pyenv 用のパス通し
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

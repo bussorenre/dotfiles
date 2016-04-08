@@ -19,7 +19,8 @@
 (display-time)
 
 ;; 行番号を常に表示させる
-(global-linum-mode)
+(require 'linum)
+(global-linum-mode t)
 (setq linum-format "%4d ")
 
 ;; 現在行を目立たせる
@@ -90,18 +91,43 @@
 	    )
 	  )
 
+
 ;; =================================================
-;; auto-complete-c-headers
+;; python-mode 
 ;; =================================================
-(defun my:ac-c-headers-init ()
-  (require 'auto-complete-c-headers)
-  (add-to-list 'ac-sources 'ac-source-c-headers))
+(require 'python)
+(defun python-shell-parse-command ()
+  "Return the string used to execute the inferior Python process."
+  "python3 -i"
+    )
 
-(add-hook 'c++-mode-hook 'my:ac-c-headers-init)
-(add-hook 'c-mode-hook 'my:ac-c-headers-init)
+(add-hook 'python-mode-hook
+	  '(lambda ()
+	     (setq indent-tabs-mode nil)
+	     (setq indent-level 4)
+	     (setq python-indent 4)
+	     (define-key python-mode-map "\C-m" 'newline-and-indent)
+	     (setq tab-width 4)))
+		   
 
 
 
-;; ==================================================
-;; function-args
-;; ==================================================
+;;
+(require 'ggtags)
+(add-hook 'c-mode-common-hook
+	  (lambda ()
+	    (when (drived-mode-p 'c-mode 'c++-mode)
+	      (ggtags-mode 1))))
+
+(define-key ggtags-mode-map (kbd "C-c g s") 'ggtags-find-other-symbol)
+(define-key ggtags-mode-map (kbd "C-c g h") 'ggtags-view-tag-history)
+(define-key ggtags-mode-map (kbd "C-c g r") 'ggtags-find-reference)
+(define-key ggtags-mode-map (kbd "C-c g f") 'ggtags-find-file)
+(define-key ggtags-mode-map (kbd "C-c g c") 'ggtags-create-tags)
+(define-key ggtags-mode-map (kbd "C-c g u") 'ggtags-update-tags)
+
+(define-key ggtags-mode-map (kbd "M-,") 'pop-tag-mark)
+
+
+
+

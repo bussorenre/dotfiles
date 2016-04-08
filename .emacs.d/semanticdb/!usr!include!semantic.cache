@@ -1,0 +1,1891 @@
+;; Object include/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "include/"
+  :tables
+  (list
+    (semanticdb-table "stdio.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_STDIO_H_" variable (:constant-flag t) nil [2975 2984])
+            ("sys/cdefs.h" include (:system-flag t) nil [2986 3008])
+            ("Availability.h" include (:system-flag t) nil [3009 3034])
+            ("_types.h" include (:system-flag t) nil [3036 3055])
+            ("sys/_types/_va_list.h" include (:system-flag t) nil [3158 3190])
+            ("sys/_types/_size_t.h" include (:system-flag t) nil [3191 3222])
+            ("sys/_types/_null.h" include (:system-flag t) nil [3223 3252])
+            ("sys/stdio.h" include (:system-flag t) nil [3254 3276])
+            ("fpos_t" type
+               (:typedef ("__darwin_off_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [3278 3309])
+            ("_FSTDIO" variable (:constant-flag t) nil [3319 3326])
+            ("__sbuf" type
+               (:members 
+                  ( ("_base" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [3601 3622])
+                    ("_size" variable (:type "int") (reparse-symbol classsubparts) [3624 3635]))                  
+                :type "struct")
+                nil [3584 3638])
+            ("__sFILEX" type
+               (:prototype t
+                :type "struct")
+                nil [3689 3705])
+            ("__sFILE" type
+               (:members 
+                  ( ("_p" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [4761 4779])
+                    ("_r" variable (:type "int") (reparse-symbol classsubparts) [4821 4828])
+                    ("_w" variable (:type "int") (reparse-symbol classsubparts) [4864 4871])
+                    ("_flags" variable (:type "short") (reparse-symbol classsubparts) [4908 4921])
+                    ("_file" variable (:type "short") (reparse-symbol classsubparts) [4967 4979])
+                    ("_bf" variable (:type ("__sbuf" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5024 5042])
+                    ("_lbfsize" variable (:type "int") (reparse-symbol classsubparts) [5089 5102])
+                    ("_cookie" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol classsubparts) [5162 5176])
+                    ("_close" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5228 5235]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5214 5236])
+                    ("_read" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5252 5259])
+                            ("" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5260 5267])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [5268 5272]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5238 5273])
+                    ("_seek" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5292 5299])
+                            ("" variable (:type ("fpos_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5300 5307])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [5308 5312]))                          
+                        :type ("fpos_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [5275 5313])
+                    ("_write" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [5329 5336])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [5337 5350])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [5351 5355]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [5315 5356])
+                    ("_ub" variable (:type ("__sbuf" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5413 5431])
+                    ("_extra" variable
+                       (:pointer 1
+                        :type ("__sFILEX" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [5453 5477])
+                    ("_ur" variable (:type "int") (reparse-symbol classsubparts) [5520 5528])
+                    ("_ubuf" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [5647 5670])
+                    ("_nbuf" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [5707 5730])
+                    ("_lb" variable (:type ("__sbuf" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [5835 5853])
+                    ("_blksize" variable (:type "int") (reparse-symbol classsubparts) [5949 5962])
+                    ("_offset" variable (:type ("fpos_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6008 6023]))                  
+                :type "struct")
+                nil [4735 6072])
+            ("FILE" type
+               (:typedef ("__sFILE" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [4735 6072])
+            ("__stderrp" variable
+               (:type ("FILE" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [6135 6158])
+            ("__stdoutp" variable
+               (:type ("FILE" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [6111 6134])
+            ("__stdinp" variable
+               (:type ("FILE" type (:type "class") nil nil)
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [6088 6110])
+            ("__SLBF" variable (:constant-flag t) nil [6180 6186])
+            ("__SNBF" variable (:constant-flag t) nil [6223 6229])
+            ("__SRD" variable (:constant-flag t) nil [6263 6268])
+            ("__SWR" variable (:constant-flag t) nil [6302 6307])
+            ("__SRW" variable (:constant-flag t) nil [6393 6398])
+            ("__SEOF" variable (:constant-flag t) nil [6448 6454])
+            ("__SERR" variable (:constant-flag t) nil [6487 6493])
+            ("__SMBF" variable (:constant-flag t) nil [6528 6534])
+            ("__SAPP" variable (:constant-flag t) nil [6577 6583])
+            ("__SSTR" variable (:constant-flag t) nil [6632 6638])
+            ("__SOPT" variable (:constant-flag t) nil [6696 6702])
+            ("__SNPT" variable (:constant-flag t) nil [6749 6755])
+            ("__SOFF" variable (:constant-flag t) nil [6809 6815])
+            ("__SMOD" variable (:constant-flag t) nil [6873 6879])
+            ("__SALC" variable (:constant-flag t) nil [6934 6940])
+            ("__SIGN" variable (:constant-flag t) nil [6998 7004])
+            ("_IOFBF" variable (:constant-flag t) nil [7441 7447])
+            ("_IOLBF" variable (:constant-flag t) nil [7499 7505])
+            ("_IONBF" variable (:constant-flag t) nil [7556 7562])
+            ("BUFSIZ" variable (:constant-flag t) nil [7611 7617])
+            ("EOF" variable (:constant-flag t) nil [7668 7671])
+            ("FOPEN_MAX" variable (:constant-flag t) nil [7736 7745])
+            ("FILENAME_MAX" variable (:constant-flag t) nil [7801 7813])
+            ("P_tmpdir" variable (:constant-flag t) nil [7970 7978])
+            ("L_tmpnam" variable (:constant-flag t) nil [8006 8014])
+            ("TMP_MAX" variable (:constant-flag t) nil [8058 8065])
+            ("SEEK_SET" variable (:constant-flag t) nil [8103 8111])
+            ("SEEK_CUR" variable (:constant-flag t) nil [8178 8186])
+            ("SEEK_END" variable (:constant-flag t) nil [8266 8274])
+            ("stdin" variable (:constant-flag t) nil [8334 8339])
+            ("stdout" variable (:constant-flag t) nil [8357 8363])
+            ("stderr" variable (:constant-flag t) nil [8382 8388])
+            ("vsprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11319 11337])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11338 11362])
+                    ("" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11363 11371]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11305 11391])
+            ("vprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11251 11275])
+                    ("" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11276 11284]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11238 11304])
+            ("vfprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11165 11183])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11184 11208])
+                    ("" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11209 11217]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11151 11237])
+            ("ungetc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [11137 11141])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [11142 11149]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11125 11150])
+            ("tmpnam" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [11116 11123]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [11103 11124])
+            ("tmpfile" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("FILE" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10859 10864]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10845 10865])
+            ("sscanf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10771 10795])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10796 10820])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [10821 10825]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10759 10844])
+            ("sprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10690 10708])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10709 10733])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [10734 10738]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10677 10758])
+            ("setvbuf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10625 10643])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10644 10662])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [10663 10667])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10668 10675]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10612 10676])
+            ("setbuf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10573 10591])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10592 10610]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10560 10611])
+            ("scanf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10511 10535])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [10536 10540]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10500 10559])
+            ("rewind" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10491 10498]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10478 10499])
+            ("rename" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10449 10462])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10463 10476]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10436 10477])
+            ("remove" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10421 10434]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10409 10435])
+            ("puts" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10394 10407]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10384 10408])
+            ("putchar" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [10378 10382]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10365 10383])
+            ("putc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [10351 10355])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10356 10363]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10341 10364])
+            ("printf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10291 10315])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [10316 10320]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10279 10340])
+            ("perror" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10264 10277]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10251 10278])
+            ("gets" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [10242 10249]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10231 10250])
+            ("getchar" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [10224 10229]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10211 10230])
+            ("getc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10202 10209]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10192 10210])
+            ("fwrite" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10108 10132])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10133 10140])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10141 10148])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10149 10167]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10093 10191])
+            ("ftell" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "long"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10084 10091]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10072 10092])
+            ("fsetpos" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10047 10054])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("fpos_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10055 10070]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10034 10071])
+            ("fseek" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [10014 10021])
+                    ("" variable (:type "long") (reparse-symbol arg-sub-list) [10022 10027])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [10028 10032]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [10003 10033])
+            ("fscanf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9935 9953])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9954 9978])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [9979 9983]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9923 10002])
+            ("freopen" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("FILE" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9812 9836])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9837 9861])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9879 9897]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9798 9922])
+            ("fread" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("size_t" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9743 9761])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9762 9769])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9770 9777])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9778 9796]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9729 9797])
+            ("fputs" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9662 9686])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9687 9705]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9651 9728])
+            ("fputc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [9637 9641])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9642 9649]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9626 9650])
+            ("fprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9557 9575])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9576 9600])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [9601 9605]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9544 9625])
+            ("__DARWIN_ALIAS_STARTING_MAC___MAC_10_6" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9410 9483])
+            ("fgets" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [9051 9069])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [9070 9074])
+                    ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9075 9082]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [9039 9083])
+            ("fgetpos" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9009 9027])
+                    ("" variable
+                       (:pointer 1
+                        :type ("fpos_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [9028 9037]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8996 9038])
+            ("fgetc" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8987 8994]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8976 8995])
+            ("fflush" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8967 8974]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8955 8975])
+            ("ferror" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8946 8953]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8934 8954])
+            ("feof" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8925 8932]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8915 8933])
+            ("fclose" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8906 8913]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8894 8914])
+            ("clearerr" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [8885 8892]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [8870 8893])
+            ("funopen" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("FILE" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17252 17265])
+                    ("" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [17291 17298])
+                            ("" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [17299 17306])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [17307 17311]))                          
+                        :type "int")
+                        nil nil)
+                    ("" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [17338 17345])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [17346 17359])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [17360 17364]))                          
+                        :type "int")
+                        nil nil)
+                    ("" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [17394 17401])
+                            ("" variable (:type ("fpos_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17402 17409])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [17410 17414]))                          
+                        :type ("fpos_t" type (:type "class") nil nil))
+                        nil nil)
+                    ("" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [17441 17448]))                          
+                        :type "int")
+                        nil nil))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17238 17450])
+            ("zopen" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type ("FILE" type (:type "class") nil nil)
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17159 17172])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17173 17186])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [17187 17191]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17147 17192])
+            ("vasprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17073 17092])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17093 17117])
+                    ("" variable (:type ("va_list" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17118 17126]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17058 17146])
+            ("setlinebuf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17049 17056]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [17033 17057])
+            ("setbuffer" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "void"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [17011 17018])
+                    ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [17019 17026])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [17027 17031]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16995 17032])
+            ("fpurge" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16986 16993]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16974 16994])
+            ("fmtcheck" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16945 16958])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16959 16972]))                  
+                :constant-flag t
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16922 16973])
+            ("fgetln" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("FILE" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16903 16910])
+                    ("" variable
+                       (:pointer 1
+                        :type ("size_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16911 16920]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16890 16921])
+            ("ctermid_r" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "char"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16881 16888]))                  
+                :pointer 1
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16865 16889])
+            ("asprintf" function
+               (:typemodifiers ("extern" "\"C\"")
+                :type "int"
+                :arguments 
+                  ( ("" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16795 16814])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [16815 16839])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [16840 16844]))                  
+                :prototype-flag t)
+                (reparse-symbol extern-c-contents) [16781 16864])
+            ("sys_errlist" variable
+               (:type "char"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern")
+                :dereference 1
+                :pointer 1)
+                (reparse-symbol extern-c-contents) [16736 16779])
+            ("sys_nerr" variable
+               (:type "int"
+                :constant-flag t
+                :typemodifiers ("extern" "\"C\"" "extern"))
+                (reparse-symbol extern-c-contents) [16671 16699])
+            ("fropen" variable (:constant-flag t) nil [17471 17477])
+            ("fwopen" variable (:constant-flag t) nil [17527 17533])
+            ("feof_unlocked" variable (:constant-flag t) nil [17584 17597])
+            ("ferror_unlocked" variable (:constant-flag t) nil [17620 17635])
+            ("clearerr_unlocked" variable (:constant-flag t) nil [17660 17677])
+            ("fileno_unlocked" variable (:constant-flag t) nil [17704 17719]))          
+      :file "stdio.h"
+      :pointmax 18049
+      :fsize 18048
+      :lastmodtime '(22065 34743 0 0)
+      :unmatched-syntax '((semantic-list 9359 . 9409) (symbol 9354 . 9359) (punctuation 9353 . 9354) (symbol 9348 . 9352))
+      :lexical-table 
+        '(("__SMBF" . ((number "0x0080" 6535 . 6541)))
+          ("__SNPT" . ((number "0x0800" 6756 . 6762)))
+          ("__SIGN" . ((number "0x8000" 7006 . 7012)))
+          ("FOPEN_MAX" . ((number "20" 7746 . 7748)))
+          ("_STDIO_H_")
+          ("__SWR" . ((number "0x0008" 6308 . 6314)))
+          ("__SERR" . ((number "0x0040" 6494 . 6500)))
+          ("P_tmpdir" . ((string "\"/var/tmp/\"" 7979 . 7990)))
+          ("stderr" . ((symbol "__stderrp" 8389 . 8398)))
+          ("SEEK_CUR" . ((number "1" 8187 . 8188)))
+          ("__SSTR" . ((number "0x0200" 6639 . 6645)))
+          ("clearerr_unlocked" (spp-arg-list ("p") 17677 . 17680) . ((symbol "__sclearerr" 17681 . 17692) (semantic-list "(p)" 17692 . 17695)))
+          ("__SLBF" . ((number "0x0001" 6187 . 6193)))
+          ("__SRW" . ((number "0x0010" 6399 . 6405)))
+          ("__SOFF" . ((number "0x1000" 6816 . 6822)))
+          ("_IONBF" . ((number "2" 7563 . 7564)))
+          ("ferror_unlocked" (spp-arg-list ("p") 17635 . 17638) . ((symbol "__sferror" 17639 . 17648) (semantic-list "(p)" 17648 . 17651)))
+          ("fileno_unlocked" (spp-arg-list ("p") 17719 . 17722) . ((symbol "__sfileno" 17723 . 17732) (semantic-list "(p)" 17732 . 17735)))
+          ("_FSTDIO")
+          ("EOF" . ((semantic-list "(-1)" 7672 . 7676)))
+          ("stdin" . ((symbol "__stdinp" 8340 . 8348)))
+          ("__SEOF" . ((number "0x0020" 6455 . 6461)))
+          ("FILENAME_MAX" . ((number "1024" 7814 . 7818)))
+          ("feof_unlocked" (spp-arg-list ("p") 17597 . 17600) . ((symbol "__sfeof" 17601 . 17608) (semantic-list "(p)" 17608 . 17611)))
+          ("TMP_MAX" . ((number "308915776" 8067 . 8076)))
+          ("__SNBF" . ((number "0x0002" 6230 . 6236)))
+          ("__SAPP" . ((number "0x0100" 6584 . 6590)))
+          ("__SOPT" . ((number "0x0400" 6703 . 6709)))
+          ("SEEK_SET" . ((number "0" 8112 . 8113)))
+          ("__SALC" . ((number "0x4000" 6942 . 6948)))
+          ("_IOFBF" . ((number "0" 7448 . 7449)))
+          ("fropen" (spp-arg-list ("cookie" "fn") 17477 . 17489) . ((symbol "funopen" 17490 . 17497) (semantic-list "(cookie, fn, 0, 0, 0)" 17497 . 17518)))
+          ("__SRD" . ((number "0x0004" 6269 . 6275)))
+          ("__SMOD" . ((number "0x2000" 6880 . 6886)))
+          ("L_tmpnam" . ((number "1024" 8015 . 8019)))
+          ("SEEK_END" . ((number "2" 8275 . 8276)))
+          ("stdout" . ((symbol "__stdoutp" 8364 . 8373)))
+          ("_IOLBF" . ((number "1" 7506 . 7507)))
+          ("BUFSIZ" . ((number "1024" 7618 . 7622)))
+          ("fwopen" (spp-arg-list ("cookie" "fn") 17533 . 17545) . ((symbol "funopen" 17546 . 17553) (semantic-list "(cookie, 0, fn, 0, 0)" 17553 . 17574)))
+          )
+)
+    (semanticdb-table "Availability.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__AVAILABILITY__" variable (:constant-flag t) nil [1014 1030])
+            ("__MAC_10_0" variable (:constant-flag t) nil [5401 5411])
+            ("__MAC_10_1" variable (:constant-flag t) nil [5436 5446])
+            ("__MAC_10_2" variable (:constant-flag t) nil [5471 5481])
+            ("__MAC_10_3" variable (:constant-flag t) nil [5506 5516])
+            ("__MAC_10_4" variable (:constant-flag t) nil [5541 5551])
+            ("__MAC_10_5" variable (:constant-flag t) nil [5576 5586])
+            ("__MAC_10_6" variable (:constant-flag t) nil [5611 5621])
+            ("__MAC_10_7" variable (:constant-flag t) nil [5646 5656])
+            ("__MAC_10_8" variable (:constant-flag t) nil [5681 5691])
+            ("__MAC_10_9" variable (:constant-flag t) nil [5716 5726])
+            ("__MAC_10_10" variable (:constant-flag t) nil [5751 5762])
+            ("__MAC_10_10_2" variable (:constant-flag t) nil [5786 5799])
+            ("__MAC_10_10_3" variable (:constant-flag t) nil [5821 5834])
+            ("__MAC_10_11" variable (:constant-flag t) nil [5856 5867])
+            ("__MAC_10_11_2" variable (:constant-flag t) nil [5891 5904])
+            ("__MAC_10_11_3" variable (:constant-flag t) nil [5926 5939])
+            ("__MAC_10_11_4" variable (:constant-flag t) nil [5961 5974])
+            ("__IPHONE_2_0" variable (:constant-flag t) nil [6111 6123])
+            ("__IPHONE_2_1" variable (:constant-flag t) nil [6142 6154])
+            ("__IPHONE_2_2" variable (:constant-flag t) nil [6173 6185])
+            ("__IPHONE_3_0" variable (:constant-flag t) nil [6204 6216])
+            ("__IPHONE_3_1" variable (:constant-flag t) nil [6235 6247])
+            ("__IPHONE_3_2" variable (:constant-flag t) nil [6266 6278])
+            ("__IPHONE_4_0" variable (:constant-flag t) nil [6297 6309])
+            ("__IPHONE_4_1" variable (:constant-flag t) nil [6328 6340])
+            ("__IPHONE_4_2" variable (:constant-flag t) nil [6359 6371])
+            ("__IPHONE_4_3" variable (:constant-flag t) nil [6390 6402])
+            ("__IPHONE_5_0" variable (:constant-flag t) nil [6421 6433])
+            ("__IPHONE_5_1" variable (:constant-flag t) nil [6452 6464])
+            ("__IPHONE_6_0" variable (:constant-flag t) nil [6483 6495])
+            ("__IPHONE_6_1" variable (:constant-flag t) nil [6514 6526])
+            ("__IPHONE_7_0" variable (:constant-flag t) nil [6545 6557])
+            ("__IPHONE_7_1" variable (:constant-flag t) nil [6576 6588])
+            ("__IPHONE_8_0" variable (:constant-flag t) nil [6607 6619])
+            ("__IPHONE_8_1" variable (:constant-flag t) nil [6638 6650])
+            ("__IPHONE_8_2" variable (:constant-flag t) nil [6669 6681])
+            ("__IPHONE_8_3" variable (:constant-flag t) nil [6700 6712])
+            ("__IPHONE_8_4" variable (:constant-flag t) nil [6731 6743])
+            ("__IPHONE_9_0" variable (:constant-flag t) nil [6762 6774])
+            ("__IPHONE_9_1" variable (:constant-flag t) nil [6793 6805])
+            ("__IPHONE_9_2" variable (:constant-flag t) nil [6824 6836])
+            ("__IPHONE_9_3" variable (:constant-flag t) nil [6855 6867])
+            ("__TVOS_9_0" variable (:constant-flag t) nil [7004 7014])
+            ("__TVOS_9_1" variable (:constant-flag t) nil [7035 7045])
+            ("__TVOS_9_2" variable (:constant-flag t) nil [7066 7076])
+            ("__WATCHOS_1_0" variable (:constant-flag t) nil [7098 7111])
+            ("__WATCHOS_2_0" variable (:constant-flag t) nil [7129 7142])
+            ("AvailabilityInternal.h" include (:system-flag t) nil [7153 7186])
+            ("__OSX_AVAILABLE_STARTING" variable (:constant-flag t) nil [8245 8269])
+            ("__OSX_AVAILABLE_BUT_DEPRECATED" variable (:constant-flag t) nil [8294 8324])
+            ("__OSX_AVAILABLE_BUT_DEPRECATED_MSG" variable (:constant-flag t) nil [8377 8411])
+            ("__OS_AVAILABILITY" variable (:constant-flag t) nil [8820 8837])
+            ("__OS_AVAILABILITY_MSG" variable (:constant-flag t) nil [8874 8895])
+            ("__OSX_EXTENSION_UNAVAILABLE" variable (:constant-flag t) nil [9432 9459])
+            ("__IOS_EXTENSION_UNAVAILABLE" variable (:constant-flag t) nil [9478 9505])
+            ("__OS_EXTENSION_UNAVAILABLE" variable (:constant-flag t) nil [9635 9661])
+            ("__OSX_UNAVAILABLE" variable (:constant-flag t) nil [10215 10232])
+            ("__OSX_AVAILABLE" variable (:constant-flag t) nil [10275 10290])
+            ("__OSX_DEPRECATED" variable (:constant-flag t) nil [10341 10357])
+            ("__IOS_UNAVAILABLE" variable (:constant-flag t) nil [10933 10950])
+            ("__IOS_PROHIBITED" variable (:constant-flag t) nil [10994 11010])
+            ("__IOS_AVAILABLE" variable (:constant-flag t) nil [11053 11068])
+            ("__IOS_DEPRECATED" variable (:constant-flag t) nil [11119 11135])
+            ("__TVOS_UNAVAILABLE" variable (:constant-flag t) nil [11733 11751])
+            ("__TVOS_PROHIBITED" variable (:constant-flag t) nil [11796 11813])
+            ("__TVOS_AVAILABLE" variable (:constant-flag t) nil [11857 11873])
+            ("__TVOS_DEPRECATED" variable (:constant-flag t) nil [11925 11942])
+            ("__WATCHOS_UNAVAILABLE" variable (:constant-flag t) nil [12577 12598])
+            ("__WATCHOS_PROHIBITED" variable (:constant-flag t) nil [12646 12666])
+            ("__WATCHOS_AVAILABLE" variable (:constant-flag t) nil [12713 12732])
+            ("__WATCHOS_DEPRECATED" variable (:constant-flag t) nil [12787 12807]))          
+      :file "Availability.h"
+      :pointmax 12867
+      :fsize 12866
+      :lastmodtime '(22168 30635 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__MAC_10_3" . ((number "1030" 5528 . 5532)))
+          ("__IPHONE_2_2" . ((number "20200" 6190 . 6195)))
+          ("__IPHONE_5_1" . ((number "50100" 6469 . 6474)))
+          ("__IPHONE_8_0" . ((number "80000" 6624 . 6629)))
+          ("__WATCHOS_1_0" . ((number "10000" 7115 . 7120)))
+          ("__OSX_AVAILABLE_STARTING" (spp-arg-list ("_osx" "_ios") 8269 . 8281))
+          ("__AVAILABILITY__")
+          ("__MAC_10_4" . ((number "1040" 5563 . 5567)))
+          ("__IPHONE_8_1" . ((number "80100" 6655 . 6660)))
+          ("__MAC_10_5" . ((number "1050" 5598 . 5602)))
+          ("__IPHONE_8_2" . ((number "80200" 6686 . 6691)))
+          ("__IOS_EXTENSION_UNAVAILABLE" (spp-arg-list ("_msg") 9505 . 9511))
+          ("__OSX_UNAVAILABLE")
+          ("__MAC_10_6" . ((number "1060" 5633 . 5637)))
+          ("__MAC_10_10" . ((number "101000" 5771 . 5777)))
+          ("__IPHONE_4_0" . ((number "40000" 6314 . 6319)))
+          ("__IPHONE_8_3" . ((number "80300" 6717 . 6722)))
+          ("__OSX_AVAILABLE_BUT_DEPRECATED_MSG" (spp-arg-list ("_osxIntro" "_osxDep" "_iosIntro" "_iosDep" "_msg") 8411 . 8457))
+          ("__OS_AVAILABILITY_MSG" (spp-arg-list ("_target" "_availability" "_msg") 8895 . 8925))
+          ("__MAC_10_7" . ((number "1070" 5668 . 5672)))
+          ("__MAC_10_11" . ((number "101100" 5876 . 5882)))
+          ("__IPHONE_4_1" . ((number "40100" 6345 . 6350)))
+          ("__IPHONE_7_0" . ((number "70000" 6562 . 6567)))
+          ("__IPHONE_8_4" . ((number "80400" 6748 . 6753)))
+          ("__TVOS_9_0" . ((number "90000" 7021 . 7026)))
+          ("__OSX_AVAILABLE" (spp-arg-list ("_vers") 10290 . 10297))
+          ("__MAC_10_8" . ((number "1080" 5703 . 5707)))
+          ("__IPHONE_4_2" . ((number "40200" 6376 . 6381)))
+          ("__IPHONE_7_1" . ((number "70100" 6593 . 6598)))
+          ("__TVOS_9_1" . ((number "90100" 7052 . 7057)))
+          ("__MAC_10_9" . ((number "1090" 5738 . 5742)))
+          ("__IPHONE_4_3" . ((number "40300" 6407 . 6412)))
+          ("__TVOS_9_2" . ((number "90200" 7083 . 7088)))
+          ("__OS_EXTENSION_UNAVAILABLE" (spp-arg-list ("_msg") 9661 . 9667) . 
+              ((symbol "__OSX_EXTENSION_UNAVAILABLE" 9669 . 9696) (semantic-list "(_msg)" 9696 . 9702) (symbol "__IOS_EXTENSION_UNAVAILABLE" 9703 . 9730) (semantic-list "(_msg)" 9730 . 9736)))
+          ("__TVOS_DEPRECATED" (spp-arg-list ("_start" "_dep" "_msg") 11942 . 11962))
+          ("__MAC_10_11_2" . ((number "101102" 5911 . 5917)))
+          ("__IPHONE_3_0" . ((number "30000" 6221 . 6226)))
+          ("__TVOS_PROHIBITED")
+          ("__WATCHOS_AVAILABLE" (spp-arg-list ("_vers") 12732 . 12739))
+          ("__MAC_10_11_3" . ((number "101103" 5946 . 5952)))
+          ("__IPHONE_3_1" . ((number "30100" 6252 . 6257)))
+          ("__IPHONE_6_0" . ((number "60000" 6500 . 6505)))
+          ("__OSX_AVAILABLE_BUT_DEPRECATED" (spp-arg-list ("_osxIntro" "_osxDep" "_iosIntro" "_iosDep") 8324 . 8364))
+          ("__OSX_EXTENSION_UNAVAILABLE" (spp-arg-list ("_msg") 9459 . 9465))
+          ("__WATCHOS_DEPRECATED" (spp-arg-list ("_start" "_dep" "_msg") 12807 . 12827))
+          ("__MAC_10_11_4" . ((number "101104" 5981 . 5987)))
+          ("__IPHONE_3_2" . ((number "30200" 6283 . 6288)))
+          ("__IPHONE_6_1" . ((number "60100" 6531 . 6536)))
+          ("__IPHONE_9_0" . ((number "90000" 6779 . 6784)))
+          ("__WATCHOS_2_0" . ((number "20000" 7146 . 7151)))
+          ("__IOS_UNAVAILABLE")
+          ("__WATCHOS_PROHIBITED")
+          ("__MAC_10_0" . ((number "1000" 5423 . 5427)))
+          ("__IPHONE_9_1" . ((number "90100" 6810 . 6815)))
+          ("__IOS_DEPRECATED" (spp-arg-list ("_start" "_dep" "_msg") 11135 . 11155))
+          ("__TVOS_AVAILABLE" (spp-arg-list ("_vers") 11873 . 11880))
+          ("__WATCHOS_UNAVAILABLE")
+          ("__MAC_10_1" . ((number "1010" 5458 . 5462)))
+          ("__MAC_10_10_2" . ((number "101002" 5806 . 5812)))
+          ("__IPHONE_2_0" . ((number "20000" 6128 . 6133)))
+          ("__IPHONE_9_2" . ((number "90200" 6841 . 6846)))
+          ("__IOS_PROHIBITED")
+          ("__MAC_10_2" . ((number "1020" 5493 . 5497)))
+          ("__MAC_10_10_3" . ((number "101003" 5841 . 5847)))
+          ("__IPHONE_2_1" . ((number "20100" 6159 . 6164)))
+          ("__IPHONE_5_0" . ((number "50000" 6438 . 6443)))
+          ("__IPHONE_9_3" . ((number "90300" 6872 . 6877)))
+          ("__OS_AVAILABILITY" (spp-arg-list ("_target" "_availability") 8837 . 8861))
+          ("__OSX_DEPRECATED" (spp-arg-list ("_start" "_dep" "_msg") 10357 . 10377))
+          ("__IOS_AVAILABLE" (spp-arg-list ("_vers") 11068 . 11075))
+          ("__TVOS_UNAVAILABLE")
+          )
+)
+    (semanticdb-table "_types.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__TYPES_H_" variable (:constant-flag t) nil [1010 1020])
+            ("sys/_types.h" include (:system-flag t) nil [1022 1045])
+            ("__strfmonlike" variable (:constant-flag t) nil [1112 1125])
+            ("__strftimelike" variable (:constant-flag t) nil [1222 1236])
+            ("__darwin_nl_item" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1391 1421])
+            ("__darwin_wctrans_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [1422 1454])
+            ("__darwin_wctype_t" type
+               (:typedef ("__uint32_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1471 1508])
+            ("__DARWIN_WCHAR_MAX" variable (:constant-flag t) nil [1624 1642])
+            ("__DARWIN_WCHAR_MIN" variable (:constant-flag t) nil [1843 1861])
+            ("__DARWIN_WEOF" variable (:constant-flag t) nil [1879 1892])
+            ("_FORTIFY_SOURCE" variable (:constant-flag t) nil [2114 2129]))          
+      :file "_types.h"
+      :pointmax 2193
+      :fsize 2192
+      :lastmodtime '(22065 34743 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__strfmonlike" (spp-arg-list ("fmtarg" "firstvararg") 1125 . 1146) . ((symbol "__attribute__" 1151 . 1164) (semantic-list "((__format__ (__strfmon__, fmtarg, firstvararg)))" 1164 . 1213)))
+          ("__strftimelike" (spp-arg-list ("fmtarg") 1236 . 1244) . ((symbol "__attribute__" 1249 . 1262) (semantic-list "((__format__ (__strftime__, fmtarg, 0)))" 1262 . 1302)))
+          ("__DARWIN_WEOF" . ((semantic-list "((__darwin_wint_t)-1)" 1894 . 1915)))
+          ("__TYPES_H_")
+          ("__DARWIN_WCHAR_MAX" . ((symbol "__WCHAR_MAX__" 1643 . 1656)))
+          ("_FORTIFY_SOURCE" . ((number "2" 2130 . 2131)))
+          ("__DARWIN_WCHAR_MIN" . ((number "0" 1862 . 1863)))
+          )
+)
+    (semanticdb-table "AvailabilityInternal.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__AVAILABILITY_INTERNAL__" variable (:constant-flag t) nil [1159 1184])
+            ("__AVAILABILITY_INTERNAL_DEPRECATED" variable (:constant-flag t) nil [2559 2593])
+            ("__AVAILABILITY_INTERNAL_DEPRECATED_MSG" variable (:constant-flag t) nil [2833 2871])
+            ("__AVAILABILITY_INTERNAL_DEPRECATED_MSG" variable (:constant-flag t) nil [3119 3157])
+            ("__AVAILABILITY_INTERNAL_UNAVAILABLE" variable (:constant-flag t) nil [3208 3243])
+            ("__AVAILABILITY_INTERNAL_WEAK_IMPORT" variable (:constant-flag t) nil [3291 3326])
+            ("__AVAILABILITY_INTERNAL_REGULAR" variable (:constant-flag t) nil [3374 3405])
+            ("__MAC_OS_X_VERSION_MIN_REQUIRED" variable (:constant-flag t) nil [1558475 1558506])
+            ("__MAC_OS_X_VERSION_MAX_ALLOWED" variable (:constant-flag t) nil [1558661 1558691])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_4" variable (:constant-flag t) nil [1655270 1655306])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3" variable (:constant-flag t) nil [1655716 1655752])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2" variable (:constant-flag t) nil [1656162 1656198])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11" variable (:constant-flag t) nil [1656600 1656634])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3" variable (:constant-flag t) nil [1657044 1657080])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2" variable (:constant-flag t) nil [1657490 1657526])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10" variable (:constant-flag t) nil [1657928 1657962])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9" variable (:constant-flag t) nil [1658360 1658393])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8" variable (:constant-flag t) nil [1658791 1658824])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7" variable (:constant-flag t) nil [1659222 1659255])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6" variable (:constant-flag t) nil [1659653 1659686])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5" variable (:constant-flag t) nil [1660084 1660117])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4" variable (:constant-flag t) nil [1660515 1660548])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3" variable (:constant-flag t) nil [1660946 1660979])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2" variable (:constant-flag t) nil [1661377 1661410])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1" variable (:constant-flag t) nil [1661808 1661841])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0" variable (:constant-flag t) nil [1662239 1662272])
+            ("__AVAILABILITY_INTERNAL__MAC_NA" variable (:constant-flag t) nil [1662343 1662374])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_1" variable (:constant-flag t) nil [1662501 1662548])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_1_MSG" variable (:constant-flag t) nil [1662617 1662668])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_1" variable (:constant-flag t) nil [1662743 1662790])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_1_MSG" variable (:constant-flag t) nil [1662859 1662910])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_2" variable (:constant-flag t) nil [1663532 1663579])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_2_MSG" variable (:constant-flag t) nil [1663648 1663699])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_2" variable (:constant-flag t) nil [1663774 1663821])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_2_MSG" variable (:constant-flag t) nil [1663890 1663941])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_2" variable (:constant-flag t) nil [1664016 1664063])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_2_MSG" variable (:constant-flag t) nil [1664132 1664183])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_3" variable (:constant-flag t) nil [1665035 1665082])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_3_MSG" variable (:constant-flag t) nil [1665151 1665202])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_3" variable (:constant-flag t) nil [1665277 1665324])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_3_MSG" variable (:constant-flag t) nil [1665393 1665444])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_3" variable (:constant-flag t) nil [1665519 1665566])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_3_MSG" variable (:constant-flag t) nil [1665635 1665686])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_3" variable (:constant-flag t) nil [1665761 1665808])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_3_MSG" variable (:constant-flag t) nil [1665877 1665928])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_4" variable (:constant-flag t) nil [1667010 1667057])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_4_MSG" variable (:constant-flag t) nil [1667126 1667177])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_4" variable (:constant-flag t) nil [1667252 1667299])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_4_MSG" variable (:constant-flag t) nil [1667368 1667419])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_4" variable (:constant-flag t) nil [1667494 1667541])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_4_MSG" variable (:constant-flag t) nil [1667610 1667661])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_4" variable (:constant-flag t) nil [1667736 1667783])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_4_MSG" variable (:constant-flag t) nil [1667852 1667903])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_4" variable (:constant-flag t) nil [1667978 1668025])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_4_MSG" variable (:constant-flag t) nil [1668094 1668145])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_5" variable (:constant-flag t) nil [1669457 1669504])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_5_MSG" variable (:constant-flag t) nil [1669573 1669624])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_5" variable (:constant-flag t) nil [1669699 1669746])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_5_MSG" variable (:constant-flag t) nil [1669815 1669866])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_5" variable (:constant-flag t) nil [1669941 1669988])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_5_MSG" variable (:constant-flag t) nil [1670057 1670108])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_5" variable (:constant-flag t) nil [1670183 1670230])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_5_MSG" variable (:constant-flag t) nil [1670299 1670350])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_5" variable (:constant-flag t) nil [1670425 1670472])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_5_MSG" variable (:constant-flag t) nil [1670541 1670592])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_5" variable (:constant-flag t) nil [1670667 1670714])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_5_MSG" variable (:constant-flag t) nil [1670783 1670834])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_6" variable (:constant-flag t) nil [1672376 1672423])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1672492 1672543])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_6" variable (:constant-flag t) nil [1672618 1672665])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1672734 1672785])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_6" variable (:constant-flag t) nil [1672860 1672907])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1672976 1673027])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_6" variable (:constant-flag t) nil [1673102 1673149])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1673218 1673269])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_6" variable (:constant-flag t) nil [1673344 1673391])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1673460 1673511])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_6" variable (:constant-flag t) nil [1673586 1673633])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1673702 1673753])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_6" variable (:constant-flag t) nil [1673828 1673875])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_6_MSG" variable (:constant-flag t) nil [1673944 1673995])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_7" variable (:constant-flag t) nil [1675767 1675814])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1675883 1675934])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_7" variable (:constant-flag t) nil [1676009 1676056])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1676125 1676176])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_7" variable (:constant-flag t) nil [1676251 1676298])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1676367 1676418])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_7" variable (:constant-flag t) nil [1676493 1676540])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1676609 1676660])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_7" variable (:constant-flag t) nil [1676735 1676782])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1676851 1676902])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_7" variable (:constant-flag t) nil [1676977 1677024])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1677093 1677144])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_7" variable (:constant-flag t) nil [1677219 1677266])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1677335 1677386])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_7" variable (:constant-flag t) nil [1677461 1677508])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_7_MSG" variable (:constant-flag t) nil [1677577 1677628])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_8" variable (:constant-flag t) nil [1679630 1679677])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1679746 1679797])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_8" variable (:constant-flag t) nil [1679872 1679919])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1679988 1680039])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_8" variable (:constant-flag t) nil [1680114 1680161])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1680230 1680281])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_8" variable (:constant-flag t) nil [1680356 1680403])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1680472 1680523])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_8" variable (:constant-flag t) nil [1680598 1680645])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1680714 1680765])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_8" variable (:constant-flag t) nil [1680840 1680887])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1680956 1681007])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_8" variable (:constant-flag t) nil [1681082 1681129])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1681198 1681249])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_8" variable (:constant-flag t) nil [1681324 1681371])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1681440 1681491])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_8" variable (:constant-flag t) nil [1681566 1681613])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_8_MSG" variable (:constant-flag t) nil [1681682 1681733])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_9" variable (:constant-flag t) nil [1683965 1684012])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1684081 1684132])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_9" variable (:constant-flag t) nil [1684207 1684254])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1684323 1684374])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_9" variable (:constant-flag t) nil [1684449 1684496])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1684565 1684616])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_9" variable (:constant-flag t) nil [1684691 1684738])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1684807 1684858])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_9" variable (:constant-flag t) nil [1684933 1684980])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1685049 1685100])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_9" variable (:constant-flag t) nil [1685175 1685222])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1685291 1685342])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_9" variable (:constant-flag t) nil [1685417 1685464])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1685533 1685584])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_9" variable (:constant-flag t) nil [1685659 1685706])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1685775 1685826])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_9" variable (:constant-flag t) nil [1685901 1685948])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1686017 1686068])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_9" variable (:constant-flag t) nil [1686143 1686190])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_9_MSG" variable (:constant-flag t) nil [1686259 1686310])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10" variable (:constant-flag t) nil [1688773 1688821])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1688890 1688942])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10" variable (:constant-flag t) nil [1689017 1689065])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1689134 1689186])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10" variable (:constant-flag t) nil [1689261 1689309])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1689378 1689430])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10" variable (:constant-flag t) nil [1689505 1689553])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1689622 1689674])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10" variable (:constant-flag t) nil [1689749 1689797])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1689866 1689918])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10" variable (:constant-flag t) nil [1689993 1690041])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1690110 1690162])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10" variable (:constant-flag t) nil [1690237 1690285])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1690354 1690406])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10" variable (:constant-flag t) nil [1690481 1690529])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1690598 1690650])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10" variable (:constant-flag t) nil [1690725 1690773])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1690842 1690894])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10" variable (:constant-flag t) nil [1690969 1691017])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1691086 1691138])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10" variable (:constant-flag t) nil [1691213 1691262])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_MSG" variable (:constant-flag t) nil [1691331 1691384])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1694105 1694155])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1694224 1694278])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1694353 1694403])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1694472 1694526])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1694601 1694651])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1694720 1694774])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1694849 1694899])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1694968 1695022])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1695097 1695147])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1695216 1695270])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1695345 1695395])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1695464 1695518])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1695593 1695643])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1695712 1695766])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1695841 1695891])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1695960 1696014])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1696089 1696139])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1696208 1696262])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1696337 1696387])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1696456 1696510])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1696585 1696636])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1696705 1696760])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_2" variable (:constant-flag t) nil [1696835 1696888])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_2_MSG" variable (:constant-flag t) nil [1696957 1697014])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1700027 1700077])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1700146 1700200])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1700275 1700325])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1700394 1700448])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1700523 1700573])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1700642 1700696])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1700771 1700821])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1700890 1700944])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1701019 1701069])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1701138 1701192])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1701267 1701317])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1701386 1701440])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1701515 1701565])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1701634 1701688])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1701763 1701813])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1701882 1701936])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1702011 1702061])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1702130 1702184])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1702259 1702309])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1702378 1702432])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1702507 1702558])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1702627 1702682])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1702757 1702810])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1702879 1702936])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_10_3" variable (:constant-flag t) nil [1703011 1703064])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_10_3_MSG" variable (:constant-flag t) nil [1703133 1703190])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11" variable (:constant-flag t) nil [1706449 1706497])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1706566 1706618])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11" variable (:constant-flag t) nil [1706693 1706741])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1706810 1706862])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11" variable (:constant-flag t) nil [1706937 1706985])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1707054 1707106])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11" variable (:constant-flag t) nil [1707181 1707229])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1707298 1707350])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11" variable (:constant-flag t) nil [1707425 1707473])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1707542 1707594])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11" variable (:constant-flag t) nil [1707669 1707717])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1707786 1707838])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11" variable (:constant-flag t) nil [1707913 1707961])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1708030 1708082])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11" variable (:constant-flag t) nil [1708157 1708205])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1708274 1708326])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11" variable (:constant-flag t) nil [1708401 1708449])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1708518 1708570])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11" variable (:constant-flag t) nil [1708645 1708693])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1708762 1708814])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11" variable (:constant-flag t) nil [1708889 1708938])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1709007 1709060])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11" variable (:constant-flag t) nil [1709135 1709186])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1709255 1709310])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11" variable (:constant-flag t) nil [1709385 1709436])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1709505 1709560])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11" variable (:constant-flag t) nil [1709635 1709684])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_MSG" variable (:constant-flag t) nil [1709753 1709806])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1713251 1713301])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1713370 1713424])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1713499 1713549])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1713618 1713672])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1713747 1713797])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1713866 1713920])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1713995 1714045])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1714114 1714168])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1714243 1714293])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1714362 1714416])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1714491 1714541])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1714610 1714664])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1714739 1714789])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1714858 1714912])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1714987 1715037])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1715106 1715160])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1715235 1715285])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1715354 1715408])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1715483 1715533])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1715602 1715656])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1715731 1715782])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1715851 1715906])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1715981 1716034])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1716103 1716160])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1716235 1716288])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1716357 1716414])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1716489 1716540])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1716609 1716664])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_2" variable (:constant-flag t) nil [1716739 1716792])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_2_MSG" variable (:constant-flag t) nil [1716861 1716918])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1720667 1720717])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1720786 1720840])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1720915 1720965])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1721034 1721088])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1721163 1721213])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1721282 1721336])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1721411 1721461])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1721530 1721584])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1721659 1721709])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1721778 1721832])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1721907 1721957])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1722026 1722080])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1722155 1722205])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1722274 1722328])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1722403 1722453])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1722522 1722576])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1722651 1722701])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1722770 1722824])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1722899 1722949])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1723018 1723072])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1723147 1723198])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1723267 1723322])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1723397 1723450])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1723519 1723576])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1723651 1723704])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1723773 1723830])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1723905 1723956])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1724025 1724080])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1724155 1724208])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1724277 1724334])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_3" variable (:constant-flag t) nil [1724409 1724462])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_3_MSG" variable (:constant-flag t) nil [1724531 1724588])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1728585 1728635])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1728704 1728758])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1728833 1728883])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1728952 1729006])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1729081 1729131])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1729200 1729254])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1729329 1729379])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1729448 1729502])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1729577 1729627])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1729696 1729750])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1729825 1729875])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1729944 1729998])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1730073 1730123])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1730192 1730246])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1730321 1730371])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1730440 1730494])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1730569 1730619])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1730688 1730742])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1730817 1730867])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1730936 1730990])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1731065 1731116])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1731185 1731240])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1731315 1731368])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1731437 1731494])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1731569 1731622])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1731691 1731748])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1731823 1731874])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1731943 1731998])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1732073 1732126])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1732195 1732252])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1732327 1732380])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1732449 1732506])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_10_11_4" variable (:constant-flag t) nil [1732581 1732634])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_10_11_4_MSG" variable (:constant-flag t) nil [1732703 1732760])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_NA" variable (:constant-flag t) nil [1736940 1736985])
+            ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1737048 1737097])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_NA" variable (:constant-flag t) nil [1737156 1737201])
+            ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1737264 1737313])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_NA" variable (:constant-flag t) nil [1737372 1737417])
+            ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1737480 1737529])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_NA" variable (:constant-flag t) nil [1737588 1737633])
+            ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1737696 1737745])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_NA" variable (:constant-flag t) nil [1737804 1737849])
+            ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1737912 1737961])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_NA" variable (:constant-flag t) nil [1738020 1738065])
+            ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1738128 1738177])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_NA" variable (:constant-flag t) nil [1738236 1738281])
+            ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1738344 1738393])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_NA" variable (:constant-flag t) nil [1738452 1738497])
+            ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1738560 1738609])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_NA" variable (:constant-flag t) nil [1738668 1738713])
+            ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1738776 1738825])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_NA" variable (:constant-flag t) nil [1738884 1738929])
+            ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1738992 1739041])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_NA" variable (:constant-flag t) nil [1739100 1739146])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1739210 1739260])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_NA" variable (:constant-flag t) nil [1739320 1739368])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1739434 1739486])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_NA" variable (:constant-flag t) nil [1739548 1739596])
+            ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1739662 1739714])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_NA" variable (:constant-flag t) nil [1739776 1739822])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1739886 1739936])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_NA" variable (:constant-flag t) nil [1739996 1740044])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1740110 1740162])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_NA" variable (:constant-flag t) nil [1740224 1740272])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1740338 1740390])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_NA" variable (:constant-flag t) nil [1740452 1740500])
+            ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1740566 1740618])
+            ("__AVAILABILITY_INTERNAL__MAC_NA_DEP__MAC_NA" variable (:constant-flag t) nil [1740680 1740723])
+            ("__AVAILABILITY_INTERNAL__MAC_NA_DEP__MAC_NA_MSG" variable (:constant-flag t) nil [1740790 1740837]))          
+      :file "AvailabilityInternal.h"
+      :pointmax 1740942
+      :fsize 1740941
+      :lastmodtime '(22168 30630 0 0)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__AVAILABILITY_INTERNAL_REGULAR")
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1657088 . 1657119)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_1_MSG" (spp-arg-list ("_msg") 1662668 . 1662674) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1662678 . 1662716) (semantic-list "(_msg)" 1662716 . 1662722)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1665580 . 1665614)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_5_MSG" (spp-arg-list ("_msg") 1670350 . 1670356) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1670360 . 1670398) (semantic-list "(_msg)" 1670398 . 1670404)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1673889 . 1673923)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1676554 . 1676588)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1679691 . 1679725)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1680281 . 1680287) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1680291 . 1680329) (semantic-list "(_msg)" 1680329 . 1680335)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1685584 . 1685590) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1685594 . 1685632) (semantic-list "(_msg)" 1685632 . 1685638)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1689186 . 1689192) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1689196 . 1689234) (semantic-list "(_msg)" 1689234 . 1689240)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1695022 . 1695028) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1695032 . 1695070) (semantic-list "(_msg)" 1695070 . 1695076)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1695905 . 1695939)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1701936 . 1701942) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1701946 . 1701984) (semantic-list "(_msg)" 1701984 . 1701990)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1709450 . 1709484)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1713424 . 1713430) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1713434 . 1713472) (semantic-list "(_msg)" 1713472 . 1713478)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1714307 . 1714341)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1721832 . 1721838) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1721842 . 1721880) (semantic-list "(_msg)" 1721880 . 1721886)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1722715 . 1722749)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1730742 . 1730748) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1730752 . 1730790) (semantic-list "(_msg)" 1730790 . 1730796)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1732506 . 1732512) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1732516 . 1732554) (semantic-list "(_msg)" 1732554 . 1732560)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1662280 . 1662311)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1667555 . 1667589)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_4_MSG" (spp-arg-list ("_msg") 1667661 . 1667667) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1667671 . 1667709) (semantic-list "(_msg)" 1667709 . 1667715)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1676176 . 1676182) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1676186 . 1676224) (semantic-list "(_msg)" 1676224 . 1676230)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1677280 . 1677314)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1680417 . 1680451)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1681007 . 1681013) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1681017 . 1681055) (semantic-list "(_msg)" 1681055 . 1681061)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1684026 . 1684060)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1686310 . 1686316) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1686320 . 1686358) (semantic-list "(_msg)" 1686358 . 1686364)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1689430 . 1689436) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1689440 . 1689478) (semantic-list "(_msg)" 1689478 . 1689484)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1694913 . 1694947)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1695766 . 1695772) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1695776 . 1695814) (semantic-list "(_msg)" 1695814 . 1695820)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1701827 . 1701861)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1713315 . 1713349)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1714168 . 1714174) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1714178 . 1714216) (semantic-list "(_msg)" 1714216 . 1714222)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1721723 . 1721757)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1722576 . 1722582) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1722586 . 1722624) (semantic-list "(_msg)" 1722624 . 1722630)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1724334 . 1724340) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1724344 . 1724382) (semantic-list "(_msg)" 1724382 . 1724388)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1730633 . 1730667)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1731240 . 1731246) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1731250 . 1731288) (semantic-list "(_msg)" 1731288 . 1731294)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1731494 . 1731500) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1731504 . 1731542) (semantic-list "(_msg)" 1731542 . 1731548)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_0" 1736998 . 1737031)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1739486 . 1739492) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_10_2" 1739495 . 1739531)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1661849 . 1661880)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_1" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1662804 . 1662838)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_3_MSG" (spp-arg-list ("_msg") 1665444 . 1665450) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1665454 . 1665492) (semantic-list "(_msg)" 1665492 . 1665498)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1670002 . 1670036)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1672543 . 1672549) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1672553 . 1672591) (semantic-list "(_msg)" 1672591 . 1672597)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1676902 . 1676908) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1676912 . 1676950) (semantic-list "(_msg)" 1676950 . 1676956)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1681143 . 1681177)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1681733 . 1681739) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1681743 . 1681781) (semantic-list "(_msg)" 1681781 . 1681787)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1684752 . 1684786)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1688835 . 1688869)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1689323 . 1689357)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1689674 . 1689680) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1689684 . 1689722) (semantic-list "(_msg)" 1689722 . 1689728)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1696510 . 1696516) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1696520 . 1696558) (semantic-list "(_msg)" 1696558 . 1696564)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1700200 . 1700206) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1700210 . 1700248) (semantic-list "(_msg)" 1700248 . 1700254)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1700835 . 1700869)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1706618 . 1706624) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1706628 . 1706666) (semantic-list "(_msg)" 1706666 . 1706672)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1714912 . 1714918) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1714922 . 1714960) (semantic-list "(_msg)" 1714960 . 1714966)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1715547 . 1715581)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1720731 . 1720765)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1729006 . 1729012) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1729016 . 1729054) (semantic-list "(_msg)" 1729054 . 1729060)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1729641 . 1729675)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_1" 1737214 . 1737247)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1739714 . 1739720) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_10_3" 1739723 . 1739759)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11_2" 1740057 . 1740093)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1661418 . 1661449)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_2_MSG" (spp-arg-list ("_msg") 1663699 . 1663705) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1663709 . 1663747) (semantic-list "(_msg)" 1663747 . 1663753)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1663835 . 1663869)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1670728 . 1670762)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1672921 . 1672955)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1673269 . 1673275) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1673279 . 1673317) (semantic-list "(_msg)" 1673317 . 1673323)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1677628 . 1677634) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1677638 . 1677676) (semantic-list "(_msg)" 1677676 . 1677682)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1684616 . 1684622) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1684626 . 1684664) (semantic-list "(_msg)" 1684664 . 1684670)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1685478 . 1685512)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1689079 . 1689113)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1689567 . 1689601)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1689918 . 1689924) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1689928 . 1689966) (semantic-list "(_msg)" 1689966 . 1689972)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1696153 . 1696187)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1700944 . 1700950) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1700954 . 1700992) (semantic-list "(_msg)" 1700992 . 1700998)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1706511 . 1706545)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1706862 . 1706868) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1706872 . 1706910) (semantic-list "(_msg)" 1706910 . 1706916)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1706999 . 1707033)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1714555 . 1714589)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1715656 . 1715662) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1715666 . 1715704) (semantic-list "(_msg)" 1715704 . 1715710)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1716048 . 1716082)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1720840 . 1720846) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1720850 . 1720888) (semantic-list "(_msg)" 1720888 . 1720894)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1722963 . 1722997)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1728649 . 1728683)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1729750 . 1729756) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1729760 . 1729798) (semantic-list "(_msg)" 1729798 . 1729804)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1737097 . 1737103) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_0" 1737106 . 1737139)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_2" 1737430 . 1737463)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11_3" 1740285 . 1740321)))
+          ("__AVAILABILITY_INTERNAL_DEPRECATED" . ((symbol "__attribute__" 2605 . 2618) (semantic-list "((deprecated))" 2618 . 2632)))
+          ("__AVAILABILITY_INTERNAL_DEPRECATED_MSG" (spp-arg-list ("_msg") 3157 . 3163) . ((symbol "__attribute__" 3165 . 3178) (semantic-list "((deprecated))" 3178 . 3192)))
+          ("__MAC_OS_X_VERSION_MIN_REQUIRED" . ((symbol "__ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__" 1558507 . 1558552)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1657970 . 1658001)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1660987 . 1661018)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1665338 . 1665372)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_5_MSG" (spp-arg-list ("_msg") 1670108 . 1670114) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1670118 . 1670156) (semantic-list "(_msg)" 1670156 . 1670162)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1673647 . 1673681)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1673995 . 1674001) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1674005 . 1674043) (semantic-list "(_msg)" 1674043 . 1674049)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1676312 . 1676346)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1680039 . 1680045) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1680049 . 1680087) (semantic-list "(_msg)" 1680087 . 1680093)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1685342 . 1685348) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1685352 . 1685390) (semantic-list "(_msg)" 1685390 . 1685396)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1686204 . 1686238)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1689811 . 1689845)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1690162 . 1690168) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1690172 . 1690210) (semantic-list "(_msg)" 1690210 . 1690216)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1691384 . 1691390) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1691394 . 1691432) (semantic-list "(_msg)" 1691432 . 1691438)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1694774 . 1694780) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1694784 . 1694822) (semantic-list "(_msg)" 1694822 . 1694828)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1695161 . 1695195)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1701688 . 1701694) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1701698 . 1701736) (semantic-list "(_msg)" 1701736 . 1701742)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1702075 . 1702109)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1706755 . 1706789)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1707106 . 1707112) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1707116 . 1707154) (semantic-list "(_msg)" 1707154 . 1707160)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1707243 . 1707277)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1713563 . 1713597)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1716414 . 1716420) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1716424 . 1716462) (semantic-list "(_msg)" 1716462 . 1716468)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1716664 . 1716670) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1716674 . 1716712) (semantic-list "(_msg)" 1716712 . 1716718)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1716806 . 1716840)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1721584 . 1721590) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1721594 . 1721632) (semantic-list "(_msg)" 1721632 . 1721638)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1721971 . 1722005)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1723464 . 1723498)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1730494 . 1730500) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1730504 . 1730542) (semantic-list "(_msg)" 1730542 . 1730548)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1730881 . 1730915)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1732252 . 1732258) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1732262 . 1732300) (semantic-list "(_msg)" 1732300 . 1732306)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1737313 . 1737319) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_1" 1737322 . 1737355)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_3" 1737646 . 1737679)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11_4" 1740513 . 1740549)))
+          ("__AVAILABILITY_INTERNAL_WEAK_IMPORT" . ((symbol "__attribute__" 3337 . 3350) (semantic-list "((weak_import))" 3350 . 3365)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1656642 . 1656673)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1660556 . 1660587)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1667313 . 1667347)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_4_MSG" (spp-arg-list ("_msg") 1667419 . 1667425) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1667429 . 1667467) (semantic-list "(_msg)" 1667467 . 1667473)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_5_MSG" (spp-arg-list ("_msg") 1670834 . 1670840) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1670844 . 1670882) (semantic-list "(_msg)" 1670882 . 1670888)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1675934 . 1675940) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1675944 . 1675982) (semantic-list "(_msg)" 1675982 . 1675988)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1677038 . 1677072)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1680175 . 1680209)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1680765 . 1680771) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1680775 . 1680813) (semantic-list "(_msg)" 1680813 . 1680819)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1686068 . 1686074) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1686078 . 1686116) (semantic-list "(_msg)" 1686116 . 1686122)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1690055 . 1690089)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1690406 . 1690412) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1690416 . 1690454) (semantic-list "(_msg)" 1690454 . 1690460)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1694169 . 1694203)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1695518 . 1695524) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1695528 . 1695566) (semantic-list "(_msg)" 1695566 . 1695572)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1701083 . 1701117)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1702432 . 1702438) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1702442 . 1702480) (semantic-list "(_msg)" 1702480 . 1702486)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1707350 . 1707356) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1707360 . 1707398) (semantic-list "(_msg)" 1707398 . 1707404)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1707487 . 1707521)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1713920 . 1713926) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1713930 . 1713968) (semantic-list "(_msg)" 1713968 . 1713974)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1720979 . 1721013)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1722328 . 1722334) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1722338 . 1722376) (semantic-list "(_msg)" 1722376 . 1722382)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1724222 . 1724256)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1729889 . 1729923)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1731382 . 1731416)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1737529 . 1737535) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_2" 1737538 . 1737571)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_4" 1737862 . 1737895)))
+          ("__AVAILABILITY_INTERNAL__MAC_NA_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL_UNAVAILABLE" 1740738 . 1740773)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1660125 . 1660156)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_1" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1662562 . 1662596)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_3_MSG" (spp-arg-list ("_msg") 1665202 . 1665208) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1665212 . 1665250) (semantic-list "(_msg)" 1665250 . 1665256)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1668039 . 1668073)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_4_MSG" (spp-arg-list ("_msg") 1668145 . 1668151) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1668155 . 1668193) (semantic-list "(_msg)" 1668193 . 1668199)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1669760 . 1669794)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1676660 . 1676666) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1676670 . 1676708) (semantic-list "(_msg)" 1676708 . 1676714)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1680901 . 1680935)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1681491 . 1681497) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1681501 . 1681539) (semantic-list "(_msg)" 1681539 . 1681545)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1684510 . 1684544)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1690299 . 1690333)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1690650 . 1690656) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1690660 . 1690698) (semantic-list "(_msg)" 1690698 . 1690704)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1696262 . 1696268) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1696272 . 1696310) (semantic-list "(_msg)" 1696310 . 1696316)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1696401 . 1696435)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1700091 . 1700125)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1703190 . 1703196) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1703200 . 1703238) (semantic-list "(_msg)" 1703238 . 1703244)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1707594 . 1707600) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1707604 . 1707642) (semantic-list "(_msg)" 1707642 . 1707648)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1707731 . 1707765)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1714664 . 1714670) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1714674 . 1714712) (semantic-list "(_msg)" 1714712 . 1714718)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1714803 . 1714837)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1715796 . 1715830)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1716302 . 1716336)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1723072 . 1723078) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1723082 . 1723120) (semantic-list "(_msg)" 1723120 . 1723126)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1728758 . 1728764) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1728768 . 1728806) (semantic-list "(_msg)" 1728806 . 1728812)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1728897 . 1728931)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1732140 . 1732174)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1737745 . 1737751) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_3" 1737754 . 1737787)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_5" 1738078 . 1738111)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_10" 1739159 . 1739193)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1739260 . 1739266) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_10" 1739269 . 1739303)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_10_2" 1739381 . 1739417)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1659694 . 1659725)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1663593 . 1663627)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_3_MSG" (spp-arg-list ("_msg") 1665928 . 1665934) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1665938 . 1665976) (semantic-list "(_msg)" 1665976 . 1665982)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1670486 . 1670520)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1672679 . 1672713)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1673027 . 1673033) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1673037 . 1673075) (semantic-list "(_msg)" 1673075 . 1673081)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1677386 . 1677392) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1677396 . 1677434) (semantic-list "(_msg)" 1677434 . 1677440)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1681627 . 1681661)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1684374 . 1684380) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1684384 . 1684422) (semantic-list "(_msg)" 1684422 . 1684428)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1685236 . 1685270)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1690543 . 1690577)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1690894 . 1690900) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1690904 . 1690942) (semantic-list "(_msg)" 1690942 . 1690948)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1695409 . 1695443)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1696760 . 1696766) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1696770 . 1696808) (semantic-list "(_msg)" 1696808 . 1696814)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1696902 . 1696936)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1697014 . 1697020) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1697024 . 1697062) (semantic-list "(_msg)" 1697062 . 1697068)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1700696 . 1700702) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1700706 . 1700744) (semantic-list "(_msg)" 1700744 . 1700750)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1702323 . 1702357)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1707838 . 1707844) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1707848 . 1707886) (semantic-list "(_msg)" 1707886 . 1707892)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1707975 . 1708009)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1709060 . 1709066) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1709070 . 1709108) (semantic-list "(_msg)" 1709108 . 1709114)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1713811 . 1713845)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1715408 . 1715414) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1715418 . 1715456) (semantic-list "(_msg)" 1715456 . 1715462)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1722219 . 1722253)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1723212 . 1723246)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1723718 . 1723752)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1723830 . 1723836) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1723840 . 1723878) (semantic-list "(_msg)" 1723878 . 1723884)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1724080 . 1724086) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1724090 . 1724128) (semantic-list "(_msg)" 1724128 . 1724134)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1729502 . 1729508) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1729512 . 1729550) (semantic-list "(_msg)" 1729550 . 1729556)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1737961 . 1737967) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_4" 1737970 . 1738003)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_6" 1738294 . 1738327)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_10_3" 1739609 . 1739645)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11" 1739835 . 1739869)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1739936 . 1739942) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11" 1739945 . 1739979)))
+          ("__MAC_OS_X_VERSION_MAX_ALLOWED" . ((symbol "__MAC_10_11_4" 1558692 . 1558705)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1656206 . 1656237)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1659263 . 1659294)))
+          ("__AVAILABILITY_INTERNAL__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL_UNAVAILABLE" 1662387 . 1662422)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_2_MSG" (spp-arg-list ("_msg") 1664183 . 1664189) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1664193 . 1664231) (semantic-list "(_msg)" 1664231 . 1664237)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1665096 . 1665130)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_5_MSG" (spp-arg-list ("_msg") 1669866 . 1669872) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1669876 . 1669914) (semantic-list "(_msg)" 1669914 . 1669920)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1673405 . 1673439)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1673753 . 1673759) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1673763 . 1673801) (semantic-list "(_msg)" 1673801 . 1673807)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1676070 . 1676104)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1679797 . 1679803) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1679807 . 1679845) (semantic-list "(_msg)" 1679845 . 1679851)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1685100 . 1685106) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1685110 . 1685148) (semantic-list "(_msg)" 1685148 . 1685154)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1685962 . 1685996)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1690787 . 1690821)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1691138 . 1691144) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1691148 . 1691186) (semantic-list "(_msg)" 1691186 . 1691192)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1691276 . 1691310)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1694417 . 1694451)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1694526 . 1694532) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1694536 . 1694574) (semantic-list "(_msg)" 1694574 . 1694580)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1701331 . 1701365)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1701440 . 1701446) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1701450 . 1701488) (semantic-list "(_msg)" 1701488 . 1701494)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1702824 . 1702858)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1708082 . 1708088) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1708092 . 1708130) (semantic-list "(_msg)" 1708130 . 1708136)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1708219 . 1708253)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1709806 . 1709812) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1709816 . 1709854) (semantic-list "(_msg)" 1709854 . 1709860)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1715906 . 1715912) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1715916 . 1715954) (semantic-list "(_msg)" 1715954 . 1715960)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1716160 . 1716166) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1716170 . 1716208) (semantic-list "(_msg)" 1716208 . 1716214)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1721227 . 1721261)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1721336 . 1721342) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1721346 . 1721384) (semantic-list "(_msg)" 1721384 . 1721390)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1724476 . 1724510)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1730137 . 1730171)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1730246 . 1730252) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1730256 . 1730294) (semantic-list "(_msg)" 1730294 . 1730300)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1731130 . 1731164)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1731636 . 1731670)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1738177 . 1738183) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_5" 1738186 . 1738219)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_7" 1738510 . 1738543)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1655760 . 1655791)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1658832 . 1658863)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_1_MSG" (spp-arg-list ("_msg") 1662910 . 1662916) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1662920 . 1662958) (semantic-list "(_msg)" 1662958 . 1662964)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1665822 . 1665856)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1667071 . 1667105)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_4_MSG" (spp-arg-list ("_msg") 1667177 . 1667183) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1667187 . 1667225) (semantic-list "(_msg)" 1667225 . 1667231)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_5_MSG" (spp-arg-list ("_msg") 1670592 . 1670598) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1670602 . 1670640) (semantic-list "(_msg)" 1670640 . 1670646)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1676796 . 1676830)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1679933 . 1679967)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1680523 . 1680529) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1680533 . 1680571) (semantic-list "(_msg)" 1680571 . 1680577)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1685826 . 1685832) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1685836 . 1685874) (semantic-list "(_msg)" 1685874 . 1685880)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_10" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1691031 . 1691065)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1695270 . 1695276) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1695280 . 1695318) (semantic-list "(_msg)" 1695318 . 1695324)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1700339 . 1700373)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1702184 . 1702190) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1702194 . 1702232) (semantic-list "(_msg)" 1702232 . 1702238)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1708326 . 1708332) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1708336 . 1708374) (semantic-list "(_msg)" 1708374 . 1708380)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1708463 . 1708497)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1708952 . 1708986)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1713672 . 1713678) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1713682 . 1713720) (semantic-list "(_msg)" 1713720 . 1713726)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1715051 . 1715085)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1716554 . 1716588)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1722080 . 1722086) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1722090 . 1722128) (semantic-list "(_msg)" 1722128 . 1722134)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1729145 . 1729179)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1730990 . 1730996) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1731000 . 1731038) (semantic-list "(_msg)" 1731038 . 1731044)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1732394 . 1732428)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1732760 . 1732766) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1732770 . 1732808) (semantic-list "(_msg)" 1732808 . 1732814)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1738393 . 1738399) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_6" 1738402 . 1738435)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_8" 1738726 . 1738759)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1655314 . 1655345)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1658401 . 1658432)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1667797 . 1667831)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_4_MSG" (spp-arg-list ("_msg") 1667903 . 1667909) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1667913 . 1667951) (semantic-list "(_msg)" 1667951 . 1667957)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1669518 . 1669552)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1676418 . 1676424) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1676428 . 1676466) (semantic-list "(_msg)" 1676466 . 1676472)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1677522 . 1677556)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1680659 . 1680693)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_8_MSG" (spp-arg-list ("_msg") 1681249 . 1681255) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1681259 . 1681297) (semantic-list "(_msg)" 1681297 . 1681303)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1684268 . 1684302)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1695657 . 1695691)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1696014 . 1696020) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1696024 . 1696062) (semantic-list "(_msg)" 1696062 . 1696068)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1696650 . 1696684)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1702682 . 1702688) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1702692 . 1702730) (semantic-list "(_msg)" 1702730 . 1702736)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1702936 . 1702942) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1702946 . 1702984) (semantic-list "(_msg)" 1702984 . 1702990)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1708570 . 1708576) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1708580 . 1708618) (semantic-list "(_msg)" 1708618 . 1708624)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1708707 . 1708741)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1709698 . 1709732)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1714059 . 1714093)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1714416 . 1714422) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1714426 . 1714464) (semantic-list "(_msg)" 1714464 . 1714470)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1722467 . 1722501)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1722824 . 1722830) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1722834 . 1722872) (semantic-list "(_msg)" 1722872 . 1722878)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1723970 . 1724004)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1724588 . 1724594) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1724598 . 1724636) (semantic-list "(_msg)" 1724636 . 1724642)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1731748 . 1731754) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1731758 . 1731796) (semantic-list "(_msg)" 1731796 . 1731802)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1731998 . 1732004) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1732008 . 1732046) (semantic-list "(_msg)" 1732046 . 1732052)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1738609 . 1738615) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_7" 1738618 . 1738651)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_NA" . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_9" 1738942 . 1738975)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1740162 . 1740168) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11_2" 1740171 . 1740207)))
+          ("__AVAILABILITY_INTERNAL__MAC_NA_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1740837 . 1740843) . ((symbol "__AVAILABILITY_INTERNAL_UNAVAILABLE" 1740848 . 1740883)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_3_MSG" (spp-arg-list ("_msg") 1665686 . 1665692) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1665696 . 1665734) (semantic-list "(_msg)" 1665734 . 1665740)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_5" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1670244 . 1670278)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1672437 . 1672471)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1672785 . 1672791) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1672795 . 1672833) (semantic-list "(_msg)" 1672833 . 1672839)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_7_MSG" (spp-arg-list ("_msg") 1677144 . 1677150) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1677154 . 1677192) (semantic-list "(_msg)" 1677192 . 1677198)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_8" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1681385 . 1681419)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1684132 . 1684138) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1684142 . 1684180) (semantic-list "(_msg)" 1684180 . 1684186)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1684994 . 1685028)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1694665 . 1694699)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1700448 . 1700454) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1700458 . 1700496) (semantic-list "(_msg)" 1700496 . 1700502)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_6_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1701579 . 1701613)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1702572 . 1702606)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1703078 . 1703112)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1708814 . 1708820) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1708824 . 1708862) (semantic-list "(_msg)" 1708862 . 1708868)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1709310 . 1709316) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1709320 . 1709358) (semantic-list "(_msg)" 1709358 . 1709364)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1715160 . 1715166) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1715170 . 1715208) (semantic-list "(_msg)" 1715208 . 1715214)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_2_DEP__MAC_10_11_2_MSG" (spp-arg-list ("_msg") 1716918 . 1716924) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1716928 . 1716966) (semantic-list "(_msg)" 1716966 . 1716972)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1721475 . 1721509)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1723322 . 1723328) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1723332 . 1723370) (semantic-list "(_msg)" 1723370 . 1723376)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1723576 . 1723582) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1723586 . 1723624) (semantic-list "(_msg)" 1723624 . 1723630)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1729254 . 1729260) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1729264 . 1729302) (semantic-list "(_msg)" 1729302 . 1729308)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1730385 . 1730419)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1731888 . 1731922)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1738825 . 1738831) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_8" 1738834 . 1738867)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_3_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1740390 . 1740396) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11_3" 1740399 . 1740435)))
+          ("__AVAILABILITY_INTERNAL__")
+          ("__AVAILABILITY_INTERNAL_UNAVAILABLE" . ((symbol "__attribute__" 3254 . 3267) (semantic-list "((unavailable))" 3267 . 3282)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2" . ((symbol "__AVAILABILITY_INTERNAL_REGULAR" 1657534 . 1657565)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_2_MSG" (spp-arg-list ("_msg") 1663941 . 1663947) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1663951 . 1663989) (semantic-list "(_msg)" 1663989 . 1663995)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1664077 . 1664111)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_5_MSG" (spp-arg-list ("_msg") 1669624 . 1669630) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1669634 . 1669672) (semantic-list "(_msg)" 1669672 . 1669678)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_6" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1673163 . 1673197)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_6_MSG" (spp-arg-list ("_msg") 1673511 . 1673517) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1673521 . 1673559) (semantic-list "(_msg)" 1673559 . 1673565)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_7" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1675828 . 1675862)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_9_MSG" (spp-arg-list ("_msg") 1684858 . 1684864) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1684868 . 1684906) (semantic-list "(_msg)" 1684906 . 1684912)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_7_DEP__MAC_10_9" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1685720 . 1685754)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_MSG" (spp-arg-list ("_msg") 1688942 . 1688948) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1688952 . 1688990) (semantic-list "(_msg)" 1688990 . 1688996)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_0_DEP__MAC_10_10_2_MSG" (spp-arg-list ("_msg") 1694278 . 1694284) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1694288 . 1694326) (semantic-list "(_msg)" 1694326 . 1694332)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_2_DEP__MAC_10_10_3" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1700587 . 1700621)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_4_DEP__MAC_10_10_3_MSG" (spp-arg-list ("_msg") 1701192 . 1701198) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1701202 . 1701240) (semantic-list "(_msg)" 1701240 . 1701246)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_2_DEP__MAC_10_11" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1709200 . 1709234)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_10_3_DEP__MAC_10_11_MSG" (spp-arg-list ("_msg") 1709560 . 1709566) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1709570 . 1709608) (semantic-list "(_msg)" 1709608 . 1709614)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_8_DEP__MAC_10_11_2" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1715299 . 1715333)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_1_DEP__MAC_10_11_3_MSG" (spp-arg-list ("_msg") 1721088 . 1721094) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1721098 . 1721136) (semantic-list "(_msg)" 1721136 . 1721142)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_3_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1729393 . 1729427)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_5_DEP__MAC_10_11_4_MSG" (spp-arg-list ("_msg") 1729998 . 1730004) . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED_MSG" 1730008 . 1730046) (semantic-list "(_msg)" 1730046 . 1730052)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_10_11_4" . ((symbol "__AVAILABILITY_INTERNAL_DEPRECATED" 1732648 . 1732682)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_9_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1739041 . 1739047) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_9" 1739050 . 1739083)))
+          ("__AVAILABILITY_INTERNAL__MAC_10_11_4_DEP__MAC_NA_MSG" (spp-arg-list ("_msg") 1740618 . 1740624) . ((symbol "__AVAILABILITY_INTERNAL__MAC_10_11_4" 1740627 . 1740663)))
+          )
+))
+  :file "!usr!include!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

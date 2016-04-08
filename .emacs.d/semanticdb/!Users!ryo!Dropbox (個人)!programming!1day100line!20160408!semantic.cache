@@ -1,0 +1,57 @@
+;; Object 20160408/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "20160408/"
+  :tables
+  (list
+    (semanticdb-table "test.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("test.h" include nil nil [1 18])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [29 38])
+                    ("args" variable
+                       (:pointer 1
+                        :dereference 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [39 52]))                  
+                :type "int")
+                nil [20 152]))          
+      :file "test.c"
+      :pointmax 153
+      :fsize 152
+      :lastmodtime '(22279 11775 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "makefile"
+      :major-mode 'makefile-bsdmake-mode
+      :tags nil
+      :file "makefile"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22279 5365 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "test.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("stdio.h" include (:system-flag t) nil [1 19])
+            ("auto_complete" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [41 47])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [48 54]))                  
+                :type "void")
+                nil [22 55])
+            ("complete" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("b" variable (:type "int") (reparse-symbol arg-sub-list) [69 75]))                  
+                :type "int")
+                nil [56 76]))          
+      :file "test.h"
+      :pointmax 78
+      :fsize 77
+      :lastmodtime '(22279 2584 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!ryo!Dropbox (個人)!programming!1day100line!20160408!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
