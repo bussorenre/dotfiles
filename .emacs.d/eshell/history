@@ -1,0 +1,20 @@
+ls
+./screencaps 
+ctags
+global
+ls
+ls
+global
+global ./
+lsctags
+ls
+rm G
+rm G
+rm GTAGS
+rm GRTAGS
+rm GPATH 
+ls
+global
+global ./
+ls
+gtags -v
