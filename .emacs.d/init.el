@@ -10,10 +10,10 @@
                 "~/.emacs.d/conf"
                 ) load-path))
 
-(load "helm-init")
-(load "ggtags-init")
-(load "helm-gtags-init")
-(load "tabber-init")
+(load "golang-init")                     ; golang 関連の別途設定ファイル
+
+
+
 
 ;; 日本語などの設定
 (set-language-environment 'Japanese)    ; 日本語環境
@@ -91,15 +91,14 @@
 (define-key company-active-map [backtab] 'company-select-previous) ; おまけ
 
 
-;; package: dtrt-indent
-(require 'dtrt-indent)
-(dtrt-indent-mode 1)
-(setq dtrt-indent-verbosity 0)
 
+;; =================================================
 ;; package: undo-tree
+;; =================================================
 (require 'undo-tree)
 (global-undo-tree-mode t)
 (global-set-key (kbd "M-/") 'undo-tree-redo)
+
 
 ;; ==================================================
 ;; tramp / ssh remote file open
@@ -130,6 +129,7 @@
 	    )
 	  )
 
+
 ;; Compilation
 (global-set-key (kbd "<f5>")
 		(lambda ()
@@ -137,59 +137,16 @@
 		  (setq-local compilation-read-command nil)
 		  (call-interactively 'compile)))
 
-;; =================================================
-;; python-mode 
-;; =================================================
-(require 'python)
-(defun python-shell-parse-command ()
-  "Return the string used to execute the inferior Python process."
-  "python3 -i"
-    )
-
-(add-hook 'python-mode-hook
-	  '(lambda ()
-	     (setq indent-tabs-mode nil)
-	     (setq indent-level 4)
-	     (setq python-indent 4)
-	     (define-key python-mode-map "\C-m" 'newline-and-indent)
-	     (setq tab-width 4)))
 
 ;; =================================================
-;; golang-mode 
-;; =================================================
-(require 'go-mode)
-(add-hook 'go-mode-hook
-	  '(lambda ()
-       	    (setq indent-tabs-mode nil)    ; タブを利用しない
-	    (setq c-basic-offset 4)        ; tabサイズを4にする
-	    (setq tab-width 4)
-	    ))
+;; Neo-Tree
+;; ================================================
+(require 'neotree)
+(setq neo-show-hidden-files t)            ; 隠しファイルを表示
+(setq neo-create-file-auto-open t)        ; ファイルを新規作成した後、自動的に開く
+(setq neo-persist-show t)                 ; delete-othet-window でneotreeを消さない
+(setq neo-keymap-style 'concise)          ; キーバインドをシンプルにする
+(setq neo-smart-open t)                   ; neo-tree ウィンドウを表示すつたびにcurrent file のあるディレクトリを表示
 
-
-;; =================================================
-;; emmet-mode 
-;; =================================================
-(require 'emmet-mode)
-(add-hook 'sgml-mode-hook 'emmet-mode) ;; マークアップ言語全部で使う
-(add-hook 'css-mode-hook  'emmet-mode) ;; CSSにも使う
-(add-hook 'emmet-mode-hook (lambda () (setq emmet-indentation 2))) ;; indent はスペース2個
-(eval-after-load "emmet-mode"
-  '(define-key emmet-mode-keymap (kbd "C-j") nil)) ;; C-j は newline のままにしておく
-;; (keyboard-translate ?\C-i ?\H-i) ;;C-i と Tabの被りを回避
-;;(define-key emmet-mode-keymap (kbd "H-i") 'emmet-expand-line) ;; C-i で展開
-
-		   
-;; YASnippet
-(require 'yasnippet)
-(yas-global-mode 1)
-(setq yas-also-auto-indent-first-line t)
-
-
-;; sr-speedbar
-(require 'sr-speedbar nil t)
-(setq sr-speedbar-right-side nil)
-(setq speedbar-directory-unshown-regexp "^\\(CVS\\|RCS\\|SCCS\\|\\.\\.*$\\)\\'")
-(global-set-key (kbd "C-t") 'sr-speedbar-toggle)
-(global-unset-key (kbd "M-t"))
-
-
+(global-set-key (kbd "C-t") 'neo-global--select-window)
+(neotree-show)
