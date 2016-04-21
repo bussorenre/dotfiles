@@ -60,6 +60,26 @@
   (setq ns-command-modifier (quote meta)))
 
 
+
+;; ===============================================
+;; helm
+;; ==============================================
+(require 'helm-config)
+(helm-mode 1)
+
+; C-h で前の文字を削除する。
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
+(define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
+
+; Tabキーで
+
+; キーバインド
+(define-key global-map (kbd "C-x b") 'helm-for-files)
+(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+(define-key global-map (kbd "M-x")     'helm-M-x)
+(define-key global-map (kbd "M-y")     'helm-show-kill-ring)
+
+
 ;; company
 (require 'company)
 (global-company-mode)
