@@ -10,7 +10,7 @@
                 "~/.emacs.d/conf"
                 ) load-path))
 
-(load "golang-init")                     ; golang 関連の別途設定ファイル
+(load "golang-conf")                     ; golang 関連の別途設定ファイル
 
 
 
@@ -71,13 +71,20 @@
 (define-key helm-map (kbd "C-h") 'delete-backward-char)
 (define-key helm-find-files-map (kbd "C-h") 'delete-backward-char)
 
-; Tabキーで
+; Tabキーで補完を有効にする
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+(defadvice helm-ff-kill-or-find-buffer-fname (around execute-only-if-exist activate)
+  "Execute command only if CANDIDATE exists"
+  (when (file-exists-p candidate)
+        ad-do-it))
 
 ; キーバインド
 (define-key global-map (kbd "C-x b") 'helm-for-files)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
 (define-key global-map (kbd "M-x")     'helm-M-x)
 (define-key global-map (kbd "M-y")     'helm-show-kill-ring)
+
 
 
 ;; company
@@ -142,7 +149,7 @@
 (add-hook 'c-mode-common-hook
 	  '(lambda ()
 	    (setq c-default-style "linux") ; Linux Kernel のコーディング規約に従う
-	    (setq indent-tabs-mode nil)    ; タブを利用しない
+	    (setq indent-tabs-mode nil)    ; タブを利用
 	    (setq c-basic-offset 4)        ; tabサイズを4にする
 	    (setq tab-width 4)
 	    (define-key c-mode-map (kbd "<f6>") 'man)
