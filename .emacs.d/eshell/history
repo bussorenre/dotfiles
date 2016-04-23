@@ -18,3 +18,29 @@ global
 global ./
 ls
 gtags -v
+ls
+go run test1.go 
+go run web1.1.go 
+go run web1.1.go 
+go run web1.1.go 
+go run web1.1.go 
+ls
+go run main
+go run web1.2.go 
+go run web1.2.go 
+ls
+go run web1.2.go 
+go run web1.2.go 
+go run web1.2.go 
+go run web1.2.go 
+go run web1.2.go 
+ls
+go run web1.2.go 
+ls
+mkdir templates
+mv template1.2.html templates/
+ls
+go run web1.2.go 
+go run test01.go 
+go run test01.go 
+ls
