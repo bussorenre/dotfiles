@@ -44,3 +44,14 @@ go run web1.2.go
 go run test01.go 
 go run test01.go 
 ls
+ls
+go run test01.go 
+ls
+go run test01.go 
+ks
+ls
+ls -la
+ls -la
+go run test01.go 
+go run test01.go 
+go run test01.go 
