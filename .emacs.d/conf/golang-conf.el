@@ -8,7 +8,7 @@
 ;; 必要なパッケージのロード
 (require 'go-mode)
 (require 'company-go)
-;;(require 'flycheck-mode)
+(require 'flycheck)
 
 ;; 諸々の有効化、設定
 (add-hook 'go-mode-hook 'company-mode)

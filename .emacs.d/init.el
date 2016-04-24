@@ -45,6 +45,14 @@
 (global-linum-mode t)
 (setq linum-format "%4d ")
 
+;; gitの差分などを表示させる。
+(require 'git-gutter)
+(global-git-gutter-mode t)
+(git-gutter:linum-setup)
+(custom-set-variables
+  '(git-gutter:update-interval 3))
+
+
 ;; 現在行を目立たせる
 (setq hl-line-face 'underline)
 (global-hl-line-mode)
