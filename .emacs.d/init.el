@@ -44,6 +44,9 @@
 (require 'linum)
 (global-linum-mode t)
 (setq linum-format "%4d ")
+(setq linum-delay t)
+(defadvice linum-schedule (around my-linum-schedule () activate)
+    (run-with-idle-timer 0.2 nil #'linum-update-current))
 
 ;; gitの差分などを表示させる。
 (require 'git-gutter)
@@ -54,8 +57,6 @@
 
 
 ;; 現在行を目立たせる
-(setq hl-line-face 'underline)
-(global-hl-line-mode)
 
 ;; テーマを設定する
 (load-theme 'manoj-dark t)
@@ -173,7 +174,7 @@
 		  (call-interactively 'compile)))
 
 
-;; =================================================
+;; ================================================
 ;; Neo-Tree
 ;; ================================================
 (require 'neotree)
@@ -185,3 +186,17 @@
 
 (global-set-key (kbd "C-t") 'neo-global--select-window)
 (neotree-show)
+
+
+;; ================================================
+;; 3画面に分割するすげーやつ。
+;; ===============================================
+(defun split-window-horizontally-n (num_wins)
+  (interactive "p")
+  (dotimes (i (- num_wins 1))
+    (split-window-horizontally))
+  (balance-windows))
+
+(global-set-key "\C-x4" (lambda ()
+			  (interactive)
+			                             (split-window-horizontally-n 3)))

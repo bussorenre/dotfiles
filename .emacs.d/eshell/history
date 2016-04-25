@@ -55,3 +55,9 @@ ls -la
 go run test01.go 
 go run test01.go 
 go run test01.go 
+ls
+go run test03.go 
+go run test03.go 
+go run test03.go 
+go run test03.go 
+go run test03.go 
