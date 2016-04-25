@@ -89,6 +89,13 @@
   (when (file-exists-p candidate)
         ad-do-it))
 
+;; 画面上部にhelm を出現させる
+(setq helm-display-function (lambda (buf)
+			      (split-window-vertically (- 16))
+			      (other-window 1)
+			      (switch-to-buffer buf)
+			                                   ))
+
 ; キーバインド
 (define-key global-map (kbd "C-x b") 'helm-for-files)
 (define-key global-map (kbd "C-x C-f") 'helm-find-files)
@@ -176,20 +183,6 @@
 
 
 ;; ================================================
-;; Neo-Tree
-;; ================================================
-(require 'neotree)
-(setq neo-show-hidden-files t)            ; 隠しファイルを表示
-(setq neo-create-file-auto-open t)        ; ファイルを新規作成した後、自動的に開く
-(setq neo-persist-show t)                 ; delete-othet-window でneotreeを消さない
-(setq neo-keymap-style 'concise)          ; キーバインドをシンプルにする
-(setq neo-smart-open t)                   ; neo-tree ウィンドウを表示すつたびにcurrent file のあるディレクトリを表示
-
-(global-set-key (kbd "C-t") 'neo-global--select-window)
-(neotree-show)
-
-
-;; ================================================
 ;; 3画面に分割するすげーやつ。
 ;; ===============================================
 (defun split-window-vertically-n (num_wins)
@@ -224,3 +217,8 @@
 
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
+
+(add-hook 'after-init-hook (lambda()
+			     (split-window-horizontally-n 3)
+			     
+			     (eshell)))
