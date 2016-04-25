@@ -28,6 +28,7 @@
 (if window-system (menu-bar-mode 1) (menu-bar-mode -1))
 
 
+
 ;; ロックファイル / バックアップファイルを作成しない
 (setq create-lockfiles nil)
 (setq make-backup-files nil)
@@ -191,12 +192,35 @@
 ;; ================================================
 ;; 3画面に分割するすげーやつ。
 ;; ===============================================
+(defun split-window-vertically-n (num_wins)
+  (interactive "p")
+  (if (= num_wins 2)
+      (split-window-vertically)
+    (progn
+      (split-window-vertically
+       (- (window-height) (/ (window-height) num_wins)))
+      (split-window-vertically-n (- num_wins 1)))))
 (defun split-window-horizontally-n (num_wins)
   (interactive "p")
-  (dotimes (i (- num_wins 1))
-    (split-window-horizontally))
-  (balance-windows))
+  (if (= num_wins 2)
+      (split-window-horizontally)
+    (progn
+      (split-window-horizontally
+       (- (window-width) (/ (window-width) num_wins)))
+      (split-window-horizontally-n (- num_wins 1)))))
+(global-set-key "\C-x5" '(lambda ()
+			   (interactive)
+			   (split-window-vertically-n 3)))
+(global-set-key "\C-x4" '(lambda ()
+			   (interactive)
+			                              (split-window-horizontally-n 3)))
 
-(global-set-key "\C-x4" (lambda ()
-			  (interactive)
-			                             (split-window-horizontally-n 3)))
+;; 起動時の画面レイアウト
+(setq initial-scratch-message "")
+(defun remove-scratch-buffer ()
+  (if (get-buffer "*scratch*")
+      (kill-buffer "*scratch*")))
+(add-hook 'after-change-major-mode-hook 'remove-scratch-buffer)
+
+(setq-default message-log-max nil)
+(kill-buffer "*Messages*")
