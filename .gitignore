@@ -1,3 +1,10 @@
 .DS_Store
 *~
 *.swp
+
+
+.emacs.d/eshell/history
+.emacs.d/recentf
+
+.vim/.netrwhist
+
