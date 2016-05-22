@@ -574,6 +574,9 @@
  (systemtap-mode .
 		 [(0 2)
 		  nil "A mode for SystemTap" single])
+ (systemd .
+	  [(1 4 1)
+	   nil "Major mode for editing systemd units" tar])
  (syslog-mode .
 	      [(2 2)
 	       ((hide-lines
