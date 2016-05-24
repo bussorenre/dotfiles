@@ -135,6 +135,20 @@
 (define-key company-active-map [backtab] 'company-select-previous) ; おまけ
 
 
+;; =================================================
+;; company-mode company-tern
+;; =================================================
+(setq company-tern-property-marker "")
+(defun company-tern-depth (candidate)
+  "Return depth attribute for CANDIDATE. 'nil' entries are treated as 0."
+  (let ((depth (get-text-property 0 'depth candidate)))
+    (if (eq depth nil) 0 depth)))
+(add-hook 'js2-mode-hook 'tern-mode) ; 自分が使っているjs用メジャーモードに変える
+(add-to-list 'company-backends 'company-tern)
+
+
+
+
 
 ;; =================================================
 ;; package: undo-tree
@@ -161,7 +175,7 @@
 ;; =================================================
 ;; rust-mode
 ;; =================================================
-(require 'ruts-mode)
+(require 'rust-mode)
 
 
 ;; =================================================
@@ -191,6 +205,8 @@
 ;; mardown-mode 
 ;; =================================================
 (require 'markdown-mode)
+
+
 
 
 ;; ================================================
