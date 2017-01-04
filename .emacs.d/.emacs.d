@@ -1,1 +1,0 @@
-/Users/ryo1/dotfiles/.emacs.d

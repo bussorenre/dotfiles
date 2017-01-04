@@ -6,6 +6,8 @@ My configure files on Mac OX X
 
 # including settings.
 * Vim
+* Emacs
 * Git
-* bash ( for iTerm 2
+* zsh ( for iTerm 2
+* tmux
 
