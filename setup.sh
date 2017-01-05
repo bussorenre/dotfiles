@@ -14,3 +14,7 @@ git clone git@github.com:bussorenre/spacemacs.git $HOME/.emacs.d
 # change shell to zsh
 chsh -s /bin/zsh
 
+# tmux でpbcopy を使えるようにする
+brew install reattach-to-user-namespace
+
+
