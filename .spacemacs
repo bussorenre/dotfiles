@@ -40,6 +40,12 @@ values."
      ;; emacs-general
      helm
      gtags
+     (auto-completion :variables
+                       auto-completion-return-key-behavior 'complete
+                       auto-completion-tab-key-behavior 'cycle
+                       auto-completion-enable-snippets-in-popup t
+                       auto-completion-complete-with-key-sequence-delay 0.1)
+                       
 
      ;; language syntax
      emacs-lisp
@@ -314,6 +320,8 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   ;; allocate C-h to backspace
   (keyboard-translate ?\C-h ?\C-?)
+  (setq-default js2-basic-offset 2
+                js-indent-level 2)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
@@ -325,7 +333,7 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (yapfify web-mode web-beautify twittering-mode tagedit slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder rbenv pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails rake inflections pip-requirements pbcopy osx-trash osx-dictionary minitest livid-mode skewer-mode simple-httpd live-py-mode less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc hy-mode helm-pydoc helm-gtags helm-css-scss haml-mode go-guru go-eldoc go-mode ggtags feature-mode emmet-mode disaster cython-mode coffee-mode cmake-mode clang-format chruby bundler inf-ruby anaconda-mode pythonic smeargle orgit org mmm-mode markdown-toc markdown-mode magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit magit-popup git-commit with-editor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (helm-company helm-c-yasnippet company-web web-completion-data company-tern dash-functional company-statistics company-go company-c-headers company-anaconda company auto-yasnippet ac-ispell auto-complete tern yapfify web-mode web-beautify twittering-mode tagedit slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder rbenv pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails rake inflections pip-requirements pbcopy osx-trash osx-dictionary minitest livid-mode skewer-mode simple-httpd live-py-mode less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc hy-mode helm-pydoc helm-gtags helm-css-scss haml-mode go-guru go-eldoc go-mode ggtags feature-mode emmet-mode disaster cython-mode coffee-mode cmake-mode clang-format chruby bundler inf-ruby anaconda-mode pythonic smeargle orgit org mmm-mode markdown-toc markdown-mode magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit magit-popup git-commit with-editor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

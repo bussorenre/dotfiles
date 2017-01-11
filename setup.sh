@@ -17,4 +17,5 @@ chsh -s /bin/zsh
 # tmux でpbcopy を使えるようにする
 brew install reattach-to-user-namespace
 
-
+# node でjavascript 保管等に必要なパッケージを入れる
+npm install -g tern js-beautify jshint
