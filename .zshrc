@@ -56,3 +56,18 @@ if [[ ! -n $TMUX ]]; then
     tmux attach-session -t "$ID"
 fi
 
+# git 情報を読み取るようにする
+autoload -Uz vcs_info
+setopt prompt_subst
+
+# ここは http://www.sirochro.com/note/terminal-zsh-prompt-customize/ からコピー
+zstyle ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
+zstyle ':vcs_info:git:*' stagedstr "!" #commit されていないファイルがある
+zstyle ':vcs_info:git:*' unstagedstr "*" #add されていないファイルがある
+zstyle ':vcs_info:*' formats "%F{green}%c%u(%b)%f" #通常
+
+precmd () { vcs_info }
+
+# プロンプトの編集
+PROMPT='%F{magenta}[%d]%f${vcs_info_msg_0_} %# '
+RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
