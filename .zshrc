@@ -56,6 +56,12 @@ if [[ ! -n $TMUX ]]; then
     tmux attach-session -t "$ID"
 fi
 
+# git の補完を有効化する
+fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+autoload -U compinit
+compinit -u
+
 # git 情報を読み取るようにする
 autoload -Uz vcs_info
 setopt prompt_subst
