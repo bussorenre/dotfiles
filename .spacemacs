@@ -326,6 +326,17 @@ you should place your code here."
   (setq         tab-width 4
                 c-basic-offset 4
                 c-default-style "bsd")
+
+  ;; scrolling with mouse wheel
+  (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
+  (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
+  (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+  (setq mac-mouse-wheel-smooth-scroll t)
+  (global-set-key [mouse-4] 'scroll-down-line)
+  (global-set-key [mouse-5] 'scroll-up-line)
+
+  ;; dont insert magic comment in ruby-mode
+  (setq ruby-insert-encoding-magic-comment nil)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
