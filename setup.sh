@@ -14,8 +14,17 @@ git clone git@github.com:bussorenre/spacemacs.git $HOME/.emacs.d
 # change shell to zsh
 chsh -s /bin/zsh
 
-# tmux でpbcopy を使えるようにする
-brew install reattach-to-user-namespace
+
+case ${OSTYPE} in 
+    darwin*)
+	# when Mac OS X
+        # tmux でpbcopy を使えるようにする
+        brew install reattach-to-user-namespace
+
+    linux*)
+        # when Linux 
+
+esac
 
 # node でjavascript 保管等に必要なパッケージを入れる
 npm install -g tern js-beautify jshint
