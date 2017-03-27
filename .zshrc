@@ -19,7 +19,7 @@ export GOPATH=~/.go
 export PATH=/usr/local/bin:$PATH:$GOPATH/bin
 
 # emacs 短縮エイリアス
-alias e='emacs -nw'
+alias e='emacs'
 
 # github 用 ssh-agent を短縮
 alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
