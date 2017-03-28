@@ -338,7 +338,11 @@ you should place your code here."
   (global-set-key [mouse-5] 'scroll-up-line)
 
   ;; dont insert magic comment in ruby-mode
+  ;; (setq enh-ruby-add-encoding-comment-on-save nil)
   (setq ruby-insert-encoding-magic-comment nil)
+
+  ;; use pry
+  (setq inf-ruby-default-implementation "pry")
 
   ;; Command Key as Meta Key
   (when (eq system-type 'darwin)
