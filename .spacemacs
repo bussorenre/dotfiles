@@ -343,7 +343,12 @@ you should place your code here."
   ;; Command Key as Meta Key
   (when (eq system-type 'darwin)
     (setq ns-command-modifier (quote meta)))
+
+  ;; Windows Key as Meta Key
+  (when (eq system-type 'Linux)
+    (setq ns-command-modifier (quote meta)))
   )
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
