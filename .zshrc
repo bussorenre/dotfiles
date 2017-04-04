@@ -1,9 +1,40 @@
+# OSごとの設定を反映
+if [ "$(uname)" == 'Darwin']; then
+    OS='Mac'
+    setup_mac()
+elif [ "$(uname)" == 'Linux' ]; then
+    OS='Liunx'
+    setup_linux()
+fi
+
+aliases()
+
+# Mac 独自の設定変更
+function setup_mac() {
+    # display settings
+    export CLICOLOR=1
+    export LSCOLORS=GxFxcxdxCxegedabagacad
+
+    # git の補完を有効化する( Mac のみ必要)
+    fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+}
+
+# Linux 独自の設定
+function setup_linux() {
+    alias ls='ls --color=auto'
+}
+
+
+
+# 短縮エイリアス集
+function aliases() {
+    alias e='emacs &'
+    alias sag='ssh-agent & sysh-add ~/.ssh/github.com/id_rsa'
+    alias tf='terraform'
+}
+
 # language settings
 export LANG=ja_JP.UTF-8
-
-# display settings
-export CLICOLOR=1
-export LSCOLORS=GxFxcxdxCxegedabagacad
 
 # for Ruby Environment
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -18,14 +49,6 @@ PATH=/usr/texbin/:$PATH
 export GOPATH=~/.go
 export PATH=/usr/local/bin:$PATH:$GOPATH/bin
 
-# emacs 短縮エイリアス
-alias e='emacs'
-
-# github 用 ssh-agent を短縮
-alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
-
-# terraform 短縮エイリアス
-alias tf='terraform'
 
 # オレオレコマンドへのパス通し
 export PATH="$HOME/dotfiles/bin:$PATH"
@@ -55,9 +78,6 @@ if [[ ! -n $TMUX ]]; then
     ID="`echo $ID | cut -d: -f1`"
     tmux attach-session -t "$ID"
 fi
-
-# git の補完を有効化する
-fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
 
 autoload -U compinit
 compinit -u
