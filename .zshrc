@@ -1,13 +1,3 @@
-# OSごとの設定を反映
-if [ "$(uname)" == 'Darwin']; then
-    OS='Mac'
-    setup_mac()
-elif [ "$(uname)" == 'Linux' ]; then
-    OS='Liunx'
-    setup_linux()
-fi
-
-aliases()
 
 # Mac 独自の設定変更
 function setup_mac() {
@@ -32,6 +22,11 @@ function aliases() {
     alias sag='ssh-agent & sysh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
 }
+
+
+# OSごとの設定を反映
+setup_mac
+aliases
 
 # language settings
 export LANG=ja_JP.UTF-8
