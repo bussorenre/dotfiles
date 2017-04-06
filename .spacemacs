@@ -327,6 +327,12 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
+
+  ;; set UTF-8 anyway!
+  (prefer-coding-system 'utf-8)
+  (setq coding-system-for-read 'utf-8)
+  (setq coding-system-for-write 'utf-8)
+
   ;; allocate C-h to backspace
   (keyboard-translate ?\C-h ?\C-?)
   (setq-default js2-basic-offset 2
@@ -346,9 +352,6 @@ you should place your code here."
   ;; dont insert magic comment in ruby-mode
   ;; (setq enh-ruby-add-encoding-comment-on-save nil)
   (setq ruby-insert-encoding-magic-comment nil)
-
-  ;; use pry
-  (setq inf-ruby-default-implementation "pry")
 
   ;; Command Key as Meta Key
   (when (eq system-type 'darwin)
