@@ -1,14 +1,3 @@
-# OSごとの設定を反映
-if [ "$(uname)" == 'Darwin']; then
-    OS='Mac'
-    setup_mac()
-elif [ "$(uname)" == 'Linux' ]; then
-    OS='Liunx'
-    setup_linux()
-fi
-
-aliases()
-
 # Mac 独自の設定変更
 function setup_mac() {
     # display settings
@@ -21,7 +10,12 @@ function setup_mac() {
 
 # Linux 独自の設定
 function setup_linux() {
+    #display settings
     alias ls='ls --color=auto'
+
+    # rbenv setting
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 }
 
 
@@ -59,6 +53,18 @@ export PATH="$HOME/.pyenv/shims:$PATH"
 # anaconda 用のエイリアス
 #alias pip='~/.pyenv/versions/anaconda3-4.1.0/bin/pip'
 #alias anaconda='open ~/.pyenv/versions/anaconda3-4.1.0/Navigator.app'
+
+# OSごとの設定を反映
+case ${OSTYPE} in
+    darwin*)
+        setup_mac
+        ;;
+    linux*)
+        setup_linux
+        ;;
+esac
+
+aliases()
 
 # gnu global
 funcs()
