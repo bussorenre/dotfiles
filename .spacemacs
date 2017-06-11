@@ -350,7 +350,7 @@ you should place your code here."
   (global-set-key [mouse-5] 'scroll-up-line)
 
   ;; dont insert magic comment in ruby-mode
-  ;; (setq enh-ruby-add-encoding-comment-on-save nil)
+  (setq enh-ruby-add-encoding-comment-on-save nil)
   (setq ruby-insert-encoding-magic-comment nil)
 
   ;; Command Key as Meta Key
