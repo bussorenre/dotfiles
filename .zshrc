@@ -25,6 +25,7 @@ function aliases() {
     alias e='emacs &'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
+    alias befs='bundle exec foreman start'
 }
 
 

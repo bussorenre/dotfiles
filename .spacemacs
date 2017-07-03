@@ -54,7 +54,8 @@ values."
      ;; ruby settings
      (ruby :variables
            ruby-enable-enh-ruby-mode t
-           ruby-version-manager 'rbenv)
+           ruby-version-manager 'rbenv
+           ruby-test-runner 'rspec)
      ruby-on-rails
 
      ;; typescript
