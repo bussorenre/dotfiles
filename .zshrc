@@ -56,6 +56,10 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 # pyenv 用のパス通し
 export PATH="$HOME/.pyenv/shims:$PATH"
 
+# android studio 用パス通し
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+
+
 # anaconda 用のエイリアス
 #alias pip='~/.pyenv/versions/anaconda3-4.1.0/bin/pip'
 #alias anaconda='open ~/.pyenv/versions/anaconda3-4.1.0/Navigator.app'
@@ -121,3 +125,9 @@ export PATH=$COCOS_X_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Users/ryo/Downloads/cocos2d-x-3.15/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
