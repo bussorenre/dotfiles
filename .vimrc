@@ -26,6 +26,12 @@ set shiftwidth=4	" タブ幅４
 set tabstop=4		" タブ幅４
 set expandtab		" タブをスペースに変える
 
+" Makefile のときのみ、確実にTabを挿入する
+let _curfile=expand("%:r")
+if _curfile == 'Makefile'
+  set noexpandtab
+endif
+
 augroup vimrc
     autocmd! FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
     autocmd! FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2

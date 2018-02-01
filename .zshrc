@@ -22,7 +22,7 @@ function setup_linux() {
 
 # 短縮エイリアス集
 function aliases() {
-    alias e='emacs &'
+    alias e='emacs -nw'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
     alias befs='bundle exec foreman start'
@@ -131,3 +131,6 @@ if [ -f '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+

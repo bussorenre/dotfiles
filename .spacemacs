@@ -45,6 +45,9 @@ values."
      ;; search engine
      search-engine
 
+     ;; terraform
+     terraform
+
      (auto-completion :variables
                        auto-completion-return-key-behavior 'complete
                        auto-completion-tab-key-behavior 'cycle
@@ -72,11 +75,13 @@ values."
          go-tab-width 4
          gofmt-command "goimports")
 
+     ;; C/C++
+     (c-c++ :variables
+            c-c++-enable-clang-support t)
 
      ;; other language syntax
      emacs-lisp
      markdown
-     c-c++
      javascript
      html
      python
@@ -354,8 +359,19 @@ you should place your code here."
   (setq-default js2-basic-offset 2
                 js-indent-level 2)
   (setq         tab-width 2
+                web-mode-markup-indent-offset 2
                 c-basic-offset 4
                 c-default-style "bsd")
+
+  ;; tab-width is 4 in c/C++ mode
+  (add-hook 'c-mode-hook '(lambda () (setq tab-width 4)))
+  (add-hook 'c++-mode-hook '(lamdba () (setq tab-width 4)))
+  ;; Bind clang-format-region to C-M-tab in all modes:
+  (global-set-key [C-M-tab] 'clang-format-region)
+  ;; Bind clang-format-buffer to tab on the c++-mode only:
+  (add-hook 'c++-mode-hook 'clang-format-bindings)
+  (defun clang-format-bindings ()
+    (define-key c++-mode-map [tab] 'clang-format-buffer))
 
   ;; scrolling with mouse wheel
   (setq mouse-wheel-scroll-amount '(1 ((shift) . 1))) ;; one line at a time
@@ -408,7 +424,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (engine-mode winum fuzzy tide typescript-mode flycheck xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help enh-ruby-mode yaml-mode helm-company helm-c-yasnippet company-web web-completion-data company-tern dash-functional company-statistics company-go company-c-headers company-anaconda company auto-yasnippet ac-ispell auto-complete tern yapfify web-mode web-beautify twittering-mode tagedit slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder rbenv pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails rake inflections pip-requirements pbcopy osx-trash osx-dictionary minitest livid-mode skewer-mode simple-httpd live-py-mode less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc hy-mode helm-pydoc helm-gtags helm-css-scss haml-mode go-guru go-eldoc go-mode ggtags feature-mode emmet-mode disaster cython-mode coffee-mode cmake-mode clang-format chruby bundler inf-ruby anaconda-mode pythonic smeargle orgit org mmm-mode markdown-toc markdown-mode magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit magit-popup git-commit with-editor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
+    (terraform-mode hcl-mode winum fuzzy tide typescript-mode flycheck xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help enh-ruby-mode yaml-mode helm-company helm-c-yasnippet company-web web-completion-data company-tern dash-functional company-statistics company-go company-c-headers company-anaconda company auto-yasnippet ac-ispell auto-complete tern yapfify web-mode web-beautify twittering-mode tagedit slim-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe reveal-in-osx-finder rbenv pyvenv pytest pyenv-mode py-isort pug-mode projectile-rails rake inflections pip-requirements pbcopy osx-trash osx-dictionary minitest livid-mode skewer-mode simple-httpd live-py-mode less-css-mode launchctl json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc hy-mode helm-pydoc helm-gtags helm-css-scss haml-mode go-guru go-eldoc go-mode ggtags feature-mode emmet-mode disaster cython-mode coffee-mode cmake-mode clang-format chruby bundler inf-ruby anaconda-mode pythonic smeargle orgit org mmm-mode markdown-toc markdown-mode magit-gitflow helm-gitignore gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md evil-magit magit magit-popup git-commit with-editor ws-butler window-numbering which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spacemacs-theme spaceline restart-emacs request rainbow-delimiters quelpa popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation hide-comnt help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line)))
  '(tab-width 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
