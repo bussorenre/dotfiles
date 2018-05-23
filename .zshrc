@@ -22,6 +22,7 @@ function setup_linux() {
 # 短縮エイリアス集
 function aliases() {
     alias e='emacs -nw'
+    alias ll='ls -la'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
     alias befs='bundle exec foreman start'
