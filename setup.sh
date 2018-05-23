@@ -15,14 +15,14 @@ git clone git@github.com:bussorenre/spacemacs.git $HOME/.emacs.d
 chsh -s /bin/zsh
 
 
-case ${OSTYPE} in 
+case $OSTYPE in 
     darwin*)
-	# when Mac OS X
-        # tmux でpbcopy を使えるようにする
         brew install reattach-to-user-namespace
-
+        ;;
     linux*)
-        # when Linux 
+        git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+        git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+        ;; 
 
 esac
 
