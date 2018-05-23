@@ -19,7 +19,6 @@ function setup_linux() {
 }
 
 
-
 # 短縮エイリアス集
 function aliases() {
     alias e='emacs -nw'
@@ -30,7 +29,6 @@ function aliases() {
 
 
 # OSごとの設定を反映
-setup_mac
 aliases
 
 # language settings
@@ -65,7 +63,7 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 #alias anaconda='open ~/.pyenv/versions/anaconda3-4.1.0/Navigator.app'
 
 # OSごとの設定を反映
-case ${OSTYPE} in
+case $OSTYPE in
     darwin*)
         setup_mac
         ;;
@@ -73,8 +71,6 @@ case ${OSTYPE} in
         setup_linux
         ;;
 esac
-
-aliases()
 
 # gnu global
 funcs()
