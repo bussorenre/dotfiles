@@ -19,10 +19,10 @@ function setup_linux() {
 }
 
 
-
 # 短縮エイリアス集
 function aliases() {
     alias e='emacs -nw'
+    alias ll='ls -la'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
     alias befs='bundle exec foreman start'
@@ -30,7 +30,6 @@ function aliases() {
 
 
 # OSごとの設定を反映
-setup_mac
 aliases
 
 # language settings
@@ -69,7 +68,7 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 #alias anaconda='open ~/.pyenv/versions/anaconda3-4.1.0/Navigator.app'
 
 # OSごとの設定を反映
-case ${OSTYPE} in
+case $OSTYPE in
     darwin*)
         setup_mac
         ;;
@@ -77,8 +76,6 @@ case ${OSTYPE} in
         setup_linux
         ;;
 esac
-
-aliases()
 
 # gnu global
 funcs()
