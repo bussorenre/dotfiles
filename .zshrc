@@ -25,7 +25,11 @@ function aliases() {
     alias ll='ls -la'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
-    alias befs='bundle exec foreman start'
+    alias dc='docker-compose'
+
+    # aliases for git
+    alias g='git'
+    alias cm='commit -m'
 }
 
 
