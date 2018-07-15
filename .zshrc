@@ -27,6 +27,7 @@ function aliases() {
     alias tf='terraform'
     alias dc='docker-compose'
     alias s='scala'
+    alias sc='scalac'
 
     # aliases for git
     alias g='git'
