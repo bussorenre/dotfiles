@@ -19,13 +19,14 @@ function setup_linux() {
 }
 
 
-# 短縮エイリアス集
+# Commans Aliases
 function aliases() {
     alias e='emacs -nw'
     alias ll='ls -la'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
     alias dc='docker-compose'
+    alias s='scala'
 
     # aliases for git
     alias g='git'
