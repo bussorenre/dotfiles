@@ -23,6 +23,7 @@ function setup_linux() {
 function aliases() {
     alias e='emacs -nw'
     alias ll='ls -la'
+    alias sl='ls'
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
     alias dc='docker-compose'
