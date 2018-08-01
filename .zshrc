@@ -67,6 +67,10 @@ export PATH="$HOME/.pyenv/shims:$PATH"
 # android studio 用パス通し
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
+# scala env 用 パス通し
+export PATH="${HOME}/.sbtenv/bin:${PATH}"
+eval "$(sbtenv init -)"
+
 # mysql 5.6 の登録
 export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 
