@@ -27,12 +27,13 @@ function aliases() {
     alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
     alias tf='terraform'
     alias dc='docker-compose'
-    alias s='scala'
     alias sc='scalac'
+    alias tw='open https://twitter.com/'
 
     # aliases for git
     alias g='git'
     alias cm='commit -m'
+    alias gits='git status'
 }
 
 
