@@ -81,6 +81,9 @@ values."
      (c-c++ :variables
             c-c++-enable-clang-support t)
 
+     ;; Scala
+     scala
+
      ;; other language syntax
      emacs-lisp
      markdown
