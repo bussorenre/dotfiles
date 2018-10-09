@@ -1,6 +1,6 @@
 #!/bin/bash
 
-brew_packages=array("hub" "rbenv" "emacs" "zsh" "tmux")
+brew_packages=("hub" "rbenv" "emacs" "zsh" "tmux")
 
 # copy for HOME folder
 for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -nle 'm!dotfiles/(.+)$! and print $1'`; do
