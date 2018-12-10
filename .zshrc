@@ -29,11 +29,8 @@ function aliases() {
     alias dc='docker-compose'
     alias sc='scalac'
     alias tw='open https://twitter.com/'
-
-    # aliases for git
     alias g='git'
-    alias cm='commit -m'
-    alias gits='git status'
+    alias gp='git pull'
 }
 
 
@@ -72,8 +69,8 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 export PATH="${HOME}/.sbtenv/bin:${PATH}"
 eval "$(sbtenv init -)"
 
-# mysql 5.6 の登録
-export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
+# JAVA_HOME へのパス通し
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # anaconda 用のエイリアス
 #alias pip='~/.pyenv/versions/anaconda3-4.1.0/bin/pip'
@@ -124,7 +121,7 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u(%b)%f" #通常
 precmd () { vcs_info }
 
 # プロンプトの編集
-PROMPT='%F{magenta}[%d]%f${vcs_info_msg_0_} %# '
+PROMPT='%F{magenta}[%~]%f${vcs_info_msg_0_} %# '
 RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
 
 # The next line updates PATH for the Google Cloud SDK.

@@ -11,6 +11,10 @@
 	co = checkout
 	a = add .
 	cm = commit -m 
+    s = status
+    b = branch
+    cp = cherry-pick
+    l = log --oneline
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
