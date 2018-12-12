@@ -15,6 +15,7 @@
     b = branch
     cp = cherry-pick
     l = log --oneline
+    squash = rebase -i HEAD^^
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
