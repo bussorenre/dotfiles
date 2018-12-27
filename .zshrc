@@ -33,6 +33,10 @@ function aliases() {
     alias gp='git pull'
 }
 
+# import .ssh/config
+function _ssh {
+  compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
+}
 
 # OSごとの設定を反映
 aliases
