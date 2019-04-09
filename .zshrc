@@ -30,7 +30,7 @@ function aliases() {
     alias sc='scalac'
     alias tw='open https://twitter.com/'
     alias g='git'
-    alias gp='git pull'
+    alias gg='git grep'
 }
 
 # import .ssh/config
