@@ -12,6 +12,8 @@ function setup_mac() {
 function setup_linux() {
     #display settings
     alias ls='ls --color=auto'
+    alias pbcopy='xclip -selection c'
+    alias pbpaste='xclip -selection c -o'
 
     # rbenv setting
     export PATH="$HOME/.rbenv/bin:$PATH"
