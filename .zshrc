@@ -1,3 +1,12 @@
+# ssh-agent が起動していなければ起動するスクリプト
+isSshAgent=`ps -ef | grep ssh-agent | grep -v grep | wc -l`
+if [ $isSshAgent = 1 ]; then
+    echo "ssh-agent is running."
+else
+    eval `ssh-agent`
+fi
+
+
 # Mac 独自の設定変更
 function setup_mac() {
     # display settings
@@ -6,42 +15,36 @@ function setup_mac() {
 
     # git の補完を有効化する( Mac のみ必要)
     fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
+
+    # Mac Tex へのパス通し（使ってない）
+    # PATH=/usr/texbin/:$PATH
 }
 
-# Linux 独自の設定
-function setup_linux() {
+# Ubuntu 独自の設定
+function setup_ubuntu() {
     #display settings
     alias ls='ls --color=auto'
     alias pbcopy='xclip -selection c'
     alias pbpaste='xclip -selection c -o'
-
-    # rbenv setting
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 }
 
-
-# Commans Aliases
-function aliases() {
-    alias e='emacs -nw'
-    alias ll='ls -la'
-    alias sl='ls'
-    alias sag='ssh-agent & ssh-add ~/.ssh/github.com/id_rsa'
-    alias tf='terraform'
-    alias dc='docker-compose'
-    alias sc='scalac'
-    alias tw='open https://twitter.com/'
-    alias g='git'
-    alias gg='git grep'
-}
 
 # import .ssh/config
 function _ssh {
   compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
 }
 
-# OSごとの設定を反映
-aliases
+# Commans Aliases
+alias e='emacs -nw'
+alias ll='ls -la'
+alias sl='ls'
+alias tf='terraform'
+alias dc='docker-compose'
+alias sc='scalac'
+alias tw='open https://twitter.com/'
+alias g='git'
+alias gg='git grep'
+alias sad='ssh-add ~/.ssh/github.com/id_rsa'
 
 # language settings
 export LANG=ja_JP.UTF-8
@@ -52,15 +55,11 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # for Go lang
 [[ -s "/Users/ryo/.gvm/scripts/gvm" ]] && source "/Users/ryo/.gvm/scripts/gvm"
 
-# PATH settings for MacTex
-PATH=/usr/texbin/:$PATH
-
 # GOPATH
 unset GOROOT
 export GOROOT=`go env GOROOT`
 export GOPATH=~/.go
 export PATH=/usr/local/bin:$PATH:$GOPATH/bin
-
 
 # オレオレコマンドへのパス通し
 export PATH="$HOME/dotfiles/bin:$PATH"
@@ -71,16 +70,8 @@ export PATH="$HOME/.pyenv/shims:$PATH"
 # android studio 用パス通し
 export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
-# scala env 用 パス通し
-export PATH="${HOME}/.sbtenv/bin:${PATH}"
-eval "$(sbtenv init -)"
-
 # JAVA_HOME へのパス通し
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-
-# anaconda 用のエイリアス
-#alias pip='~/.pyenv/versions/anaconda3-4.1.0/bin/pip'
-#alias anaconda='open ~/.pyenv/versions/anaconda3-4.1.0/Navigator.app'
 
 # OSごとの設定を反映
 case $OSTYPE in
@@ -88,7 +79,7 @@ case $OSTYPE in
         setup_mac
         ;;
     linux*)
-        setup_linux
+        setup_ubuntu
         ;;
 esac
 

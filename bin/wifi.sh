@@ -11,15 +11,18 @@ fi
 signals=(▂ ▄ ▆)
 
 # get wi-fi informations through Airport
-info=(`(eval $airport_path -I | grep -E "^ *(agrCtlRSSI|state|lastTxRate|SSID):" | awk '{print $2}')`)
+info=(`(eval $airport_path -I | grep -E "^ *(agrCtlRSSI|agrCtlNoise|lastTxRate|SSID):" | awk '{print $2}')`)
 if [ ${info[0]} -eq 0 ]; then
     echo "offline"
     exit 1
 fi
 
 rssi=${info[0]}
+nois=${info[1]}
 rate=${info[2]}
 ssid=${info[3]}
+
+pow=rssi-nois
 
 signal=""
 for ((j = 0; j < "${#signals[@]}"; j++))
@@ -27,15 +30,15 @@ do
     #  -55　Excellent
     #  -70　not good
     #  -85　bad
-    if ((  $j == 0 && $rssi > -90 )) ||
-           (( $j == 1 && $rssi > -75 )) ||
-           (( $j == 2 && $rssi > -60 )); then
+    if ((  $j == 0 && $pow > 30 )) ||
+           (( $j == 1 && $pow > 20 )) ||
+           (( $j == 2 && $pow > 10 )); then
         # make signal
         signal="${signal}${signals[$j]} "
     else
-        signal="${signal}. "
+        signal="${signal} "
     fi
 done
 
-echo "${ssid} ${rate}Mbps ${signal}"
+echo "${ssid}[ ${signal}]"
 

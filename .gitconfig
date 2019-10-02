@@ -2,6 +2,8 @@
 	required = true
 	clean = git media clean %f
 	smudge = git media smudge %f
+[core]
+	editor = vi
 [user]
 	name = Ryo Matsumoto
 	email = ryo.mats302@gmail.com
@@ -12,6 +14,7 @@
 	a = add .
 	cm = commit -m 
     s = status
+	ss = diff --stat HEAD
     b = branch
     cp = cherry-pick
     l = log --oneline
