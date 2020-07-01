@@ -18,6 +18,9 @@ function setup_mac() {
 
     # Mac Tex へのパス通し（使ってない）
     # PATH=/usr/texbin/:$PATH
+
+    # shell integration 
+    test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 }
 
 # Ubuntu 独自の設定
@@ -37,14 +40,13 @@ function _ssh {
 # Commans Aliases
 alias e='emacs -nw'
 alias ll='ls -la'
-alias sl='ls'
+alias sl='ls' # typo supports
 alias tf='terraform'
 alias dc='docker-compose'
-alias sc='scalac'
-alias tw='open https://twitter.com/'
 alias g='git'
 alias gg='git grep'
 alias sad='ssh-add ~/.ssh/github.com/id_rsa'
+alias wip='git add . && git commit -m "wip"'
 
 # language settings
 export LANG=ja_JP.UTF-8
@@ -73,6 +75,9 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 # JAVA_HOME へのパス通し
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
+# nodebrew へのパス通し
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # OSごとの設定を反映
 case $OSTYPE in
     darwin*)
@@ -92,15 +97,17 @@ funcs()
 }
 
 # tmux セッションを自動的に立ち上げる。
-if [[ ! -n $TMUX ]]; then
-    # get the IDs
-    ID="`tmux list-sessions`"
-    if [[ -z "$ID" ]]; then
-        tmux new-session
+function tmux() {
+    if [[ ! -n $TMUX ]]; then
+        # get the IDs
+        ID="`tmux list-sessions`"
+        if [[ -z "$ID" ]]; then
+            tmux new-session
+        fi
+        ID="`echo $ID | cut -d: -f1`"
+        tmux attach-session -t "$ID"
     fi
-    ID="`echo $ID | cut -d: -f1`"
-    tmux attach-session -t "$ID"
-fi
+}
 
 autoload -U compinit
 compinit -u
@@ -109,7 +116,7 @@ compinit -u
 autoload -Uz vcs_info
 setopt prompt_subst
 
-# ここは http://www.sirochro.com/note/terminal-zsh-prompt-customize/ からコピー
+zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' check-for-changes true #formats 設定項目で %c,%u が使用可
 zstyle ':vcs_info:git:*' stagedstr "!" #commit されていないファイルがある
 zstyle ':vcs_info:git:*' unstagedstr "*" #add されていないファイルがある
@@ -118,8 +125,9 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u(%b)%f" #通常
 precmd () { vcs_info }
 
 # プロンプトの編集
+#PROMPT='%F{magenta}[%~]%f %# '
 PROMPT='%F{magenta}[%~]%f${vcs_info_msg_0_} %# '
-RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
+#RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
@@ -128,4 +136,3 @@ if [ -f '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Us
 if [ -f '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$HOME/.fastlane/bin:$PATH"
-
