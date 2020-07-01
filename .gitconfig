@@ -3,7 +3,7 @@
 	clean = git media clean %f
 	smudge = git media smudge %f
 [core]
-	editor = vi
+	editor = vim
 [user]
 	name = Ryo Matsumoto
 	email = ryo.mats302@gmail.com
@@ -11,6 +11,9 @@
 	ui = true
 [alias]
 	co = checkout
+	cob = checkout -b
+    bd = branch -D 
+    bm = branch -m
 	a = add .
 	cm = commit -m 
     s = status
@@ -24,5 +27,3 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
-[core]
-	editor = vim
