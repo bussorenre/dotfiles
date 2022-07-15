@@ -58,10 +58,10 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 [[ -s "/Users/ryo/.gvm/scripts/gvm" ]] && source "/Users/ryo/.gvm/scripts/gvm"
 
 # GOPATH
-unset GOROOT
-export GOROOT=`go env GOROOT`
-export GOPATH=~/.go
-export PATH=/usr/local/bin:$PATH:$GOPATH/bin
+#unset GOROOT
+#export GOROOT=`go env GOROOT`
+#export GOPATH=~/.go
+#export PATH=/usr/local/bin:$PATH:$GOPATH/bin
 
 # オレオレコマンドへのパス通し
 export PATH="$HOME/dotfiles/bin:$PATH"
@@ -74,9 +74,6 @@ export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
 
 # JAVA_HOME へのパス通し
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-
-# nodebrew へのパス通し
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # OSごとの設定を反映
 case $OSTYPE in
@@ -136,3 +133,9 @@ if [ -f '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Us
 if [ -f '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 export PATH="$HOME/.fastlane/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export PATH="/opt/homebrew/opt/mongodb-community@3.6/bin:$PATH"
