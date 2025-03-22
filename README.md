@@ -1,13 +1,15 @@
 dotfiles
 ========
 
-My configure files on Mac OX X
+My configure files on 
 
+ - Mac OX X
+ - WSL2
 
 # including settings.
 * Vim
 * Emacs
 * Git
-* zsh ( for iTerm 2
+* zsh
 * tmux
 

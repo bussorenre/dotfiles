@@ -23,7 +23,7 @@ function setup_mac() {
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 }
 
-# Ubuntu 独自の設定
+# Ubuntu (WSL2) 独自の設定
 function setup_ubuntu() {
     #display settings
     alias ls='ls --color=auto'
@@ -42,11 +42,12 @@ alias e='emacs -nw'
 alias ll='ls -la'
 alias sl='ls' # typo supports
 alias tf='terraform'
-alias dc='docker-compose'
+alias dc='docker compose'
 alias g='git'
 alias gg='git grep'
 alias sad='ssh-add ~/.ssh/github.com/id_rsa'
 alias wip='git add . && git commit -m "wip"'
+alias p3='python3'
 
 # language settings
 export LANG=ja_JP.UTF-8
@@ -55,13 +56,17 @@ export LANG=ja_JP.UTF-8
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # for Go lang
-[[ -s "/Users/ryo/.gvm/scripts/gvm" ]] && source "/Users/ryo/.gvm/scripts/gvm"
+function setup_go() {
+    [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+    
+    # Go PATH
+    unset GOROOT
+    export GOROOT=`go env GOROOT`
+    export GOPATH=~/.go
+    export PATH=/usr/local/bin:$PATH:$GOPATH/bin
+}
 
-# GOPATH
-unset GOROOT
-export GOROOT=`go env GOROOT`
-export GOPATH=~/.go
-export PATH=/usr/local/bin:$PATH:$GOPATH/bin
+if which go > /dev/null; then setup_go; fi
 
 # オレオレコマンドへのパス通し
 export PATH="$HOME/dotfiles/bin:$PATH"
@@ -69,14 +74,15 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 # pyenv 用のパス通し
 export PATH="$HOME/.pyenv/shims:$PATH"
 
-# android studio 用パス通し
-export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
-
 # JAVA_HOME へのパス通し
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
-# nodebrew へのパス通し
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# pnpm へのパス通し
+export PNPM_HOME="$HOME/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
 
 # OSごとの設定を反映
 case $OSTYPE in
@@ -129,10 +135,8 @@ precmd () { vcs_info }
 PROMPT='%F{magenta}[%~]%f${vcs_info_msg_0_} %# '
 #RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/ryo/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
 export PATH="$HOME/.fastlane/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
