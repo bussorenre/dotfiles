@@ -4,12 +4,12 @@
 	smudge = git media smudge %f
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
 [user]
 	name = Ryo Matsumoto
 	email = ryo.mats302@gmail.com
 [color]
 	ui = true
-	excludesfile = ~/.gitignore
 [alias]
 	co = checkout
 	cob = checkout -b
