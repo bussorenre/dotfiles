@@ -1,7 +1,18 @@
+# Mac OS
 .DS_Store
 *~
 *.swp
 
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# IntelliJ
+.idea
+*.iml
+
+# Visual Studio Code
+.vscode
 
 .emacs.d/eshell/history
 .emacs.d/recentf

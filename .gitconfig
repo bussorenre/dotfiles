@@ -9,6 +9,7 @@
 	email = ryo.mats302@gmail.com
 [color]
 	ui = true
+	excludesfile = ~/.gitignore
 [alias]
 	co = checkout
 	cob = checkout -b
@@ -27,3 +28,6 @@
 	smudge = git-lfs smudge -- %f
 	required = true
 	process = git-lfs filter-process
+
+[include]
+    path = .gitconfig.local
