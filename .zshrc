@@ -1,9 +1,6 @@
 # ssh-agent が起動していなければ起動するスクリプト
-isSshAgent=`ps -ef | grep ssh-agent | grep -v grep | wc -l`
-if [ $isSshAgent = 1 ]; then
-    echo "ssh-agent is running."
-else
-    eval `ssh-agent`
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    eval "$(ssh-agent -s)"
 fi
 
 # Mac 独自の設定変更
@@ -68,17 +65,10 @@ export LANG=ja_JP.UTF-8
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # for Go lang
-function setup_go() {
-    [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
-    
-    # Go PATH
-    unset GOROOT
-    export GOROOT=`go env GOROOT`
+if which go > /dev/null; then
     export GOPATH=~/.go
-    export PATH=/usr/local/bin:$PATH:$GOPATH/bin
-}
-
-if which go > /dev/null; then setup_go; fi
+    export PATH=$PATH:$GOPATH/bin
+fi
 
 # オレオレコマンドへのパス通し
 export PATH="$HOME/dotfiles/bin:$PATH"
