@@ -19,16 +19,28 @@ function setup_mac() {
     # Mac Tex へのパス通し（使ってない）
     # PATH=/usr/texbin/:$PATH
 
-    # shell integration 
+    # iTerm2 integration
     test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+    # JAVA_HOME
+    if [ -x /usr/libexec/java_home ]; then
+        export JAVA_HOME=$(/usr/libexec/java_home)
+    fi
 }
 
 # Ubuntu (WSL2) 独自の設定
 function setup_ubuntu() {
-    #display settings
+    # display settings
     alias ls='ls --color=auto'
     alias pbcopy='xclip -selection c'
     alias pbpaste='xclip -selection c -o'
+
+    # JAVA_HOME
+    if [ -d "/usr/lib/jvm/default-java" ]; then
+        export JAVA_HOME=/usr/lib/jvm/default-java
+    elif [ -d "/usr/lib/jvm/java-11-openjdk-amd64" ]; then
+        export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+    fi
 }
 
 
@@ -74,9 +86,6 @@ export PATH="$HOME/dotfiles/bin:$PATH"
 
 # pyenv 用のパス通し
 export PATH="$HOME/.pyenv/shims:$PATH"
-
-# JAVA_HOME へのパス通し
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 
 # pnpm へのパス通し
 export PNPM_HOME="$HOME/.local/share/pnpm"
