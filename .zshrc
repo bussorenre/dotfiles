@@ -136,8 +136,5 @@ precmd () { vcs_info }
 PROMPT='%F{magenta}[%~]%f${vcs_info_msg_0_} %# '
 #RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
 
-export PATH="$HOME/.fastlane/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# マシン固有の事情で必要な設定を ~/.zshrc.local に書いておく。存在する場合は読み込む。
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
