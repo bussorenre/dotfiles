@@ -6,7 +6,6 @@ else
     eval `ssh-agent`
 fi
 
-
 # Mac 独自の設定変更
 function setup_mac() {
     # display settings

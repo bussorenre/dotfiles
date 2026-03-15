@@ -1,42 +1,94 @@
 #!/bin/bash
+set -e
 
-brew_packages=("hub" "rbenv" "emacs" "zsh" "tmux")
+DOTFILES_DIR="$HOME/dotfiles"
+PACKAGES=("gh" "rbenv" "ruby-build" "emacs" "zsh" "tmux" "terraform" "docker" "go" "pyenv")
+LINUX_PACKAGES=("xclip")
 
-# copy for HOME folder
-for file in `find $HOME/dotfiles -name '.*' | grep -v 'dotfiles/.git$' | perl -nle 'm!dotfiles/(.+)$! and print $1'`; do
-    ln -s $HOME/dotfiles/$file $HOME/$file
-done
+# Create symlinks for dotfiles
+create_symlinks() {
+    for file in $(find "$DOTFILES_DIR" -name '.*' | grep -v 'dotfiles/.git$' | perl -nle 'm!dotfiles/(.+)$! and print $1'); do
+        local target="$HOME/$file"
+        local source="$DOTFILES_DIR/$file"
 
-# delete gitignote 
-rm $HOME/.gitignore
-
-function setup_mac () {
-    # setup brew
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-    for p in "${packages[@]}"
-    do
-        brew install $p
+        if [ ! -e "$target" ] && [ ! -L "$target" ]; then
+            ln -s "$source" "$target"
+        fi
     done
+
+    # Remove .gitignore symlink (we don't want it in HOME)
+    if [ -L "$HOME/.gitignore" ]; then
+        rm "$HOME/.gitignore"
+    fi
 }
 
-# install spacemacs
-git clone git@github.com:bussorenre/spacemacs.git $HOME/.emacs.d
+# Setup for macOS
+setup_mac() {
+    # Install Homebrew if not installed
+    if ! command -v brew &> /dev/null; then
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    fi
 
+    # Install packages
+    for package in "${PACKAGES[@]}"; do
+        if ! brew list "$package" &> /dev/null; then
+            brew install "$package"
+        fi
+    done
 
-case $OSTYPE in 
-    darwin*)
-        setup_mac
+    # Install macOS specific package
+    if ! brew list reattach-to-user-namespace &> /dev/null; then
         brew install reattach-to-user-namespace
-        ;;
-    linux*)
-        git clone https://github.com/rbenv/rbenv.git ~/.rbenv
-        git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-        ;; 
+    fi
+}
 
-esac
+# Setup for Linux (WSL/Ubuntu)
+setup_linux() {
+    sudo apt-get update
+    sudo apt-get install -y "${PACKAGES[@]}" "${LINUX_PACKAGES[@]}"
+}
 
-# change shell to zsh
-chsh -s /bin/zsh
+# Install Spacemacs
+install_spacemacs() {
+    if [ ! -d "$HOME/.emacs.d" ]; then
+        git clone git@github.com:bussorenre/spacemacs.git "$HOME/.emacs.d"
+    fi
+}
 
-# node でjavascript 保管等に必要なパッケージを入れる
-npm install -g tern js-beautify jshint
+# Change default shell to zsh
+change_shell_to_zsh() {
+    local zsh_path=""
+
+    if [ -f /bin/zsh ]; then
+        zsh_path="/bin/zsh"
+    elif [ -f /usr/bin/zsh ]; then
+        zsh_path="/usr/bin/zsh"
+    fi
+
+    if [ -n "$zsh_path" ] && [ "$SHELL" != "$zsh_path" ]; then
+        chsh -s "$zsh_path"
+    fi
+}
+
+# Main setup
+main() {
+    create_symlinks
+
+    case $OSTYPE in
+        darwin*)
+            setup_mac
+            ;;
+        linux*)
+            setup_linux
+            ;;
+        *)
+            echo "Unsupported OS: $OSTYPE"
+            exit 1
+            ;;
+    esac
+
+    install_spacemacs
+    change_shell_to_zsh
+}
+
+main
