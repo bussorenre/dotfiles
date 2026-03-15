@@ -2,7 +2,7 @@
 
 ## Setup
 
-Run `setup.sh` to initialize the dotfiles.
+Run `install.sh` to initialize the dotfiles.
 
 ## Commit Messages
 
