@@ -8,14 +8,22 @@ Thumbs.db
 ehthumbs.db
 
 # IntelliJ
-.idea
+.idea/
 *.iml
 
 # Visual Studio Code
 .vscode
 
+# Emacs
 .emacs.d/eshell/history
 .emacs.d/recentf
 
+# Vim
 .vim/.netrwhist
 
+# Claude Code
+.claude/
+
+# Engineering Impact Score
+# https://github.com/machuz/engineering-impact-score
+eis.yaml
