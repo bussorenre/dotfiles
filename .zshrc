@@ -114,6 +114,10 @@ function tmux() {
     fi
 }
 
+# zsh options
+setopt AUTO_CD      # Type directory name to cd
+setopt CORRECT      # Command correction
+
 autoload -U compinit
 compinit -u
 

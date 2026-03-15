@@ -1,7 +1,3 @@
-[filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore
@@ -13,16 +9,17 @@
 [alias]
 	co = checkout
 	cob = checkout -b
-    bd = branch -D 
-    bm = branch -m
+	bd = branch -D
+	bm = branch -m
 	a = add .
-	cm = commit -m 
-    s = status
+	cm = commit -m
+	s = status
 	ss = diff --stat HEAD
-    b = branch
-    cp = cherry-pick
-    l = log --oneline
-    squash = rebase -i HEAD^^
+	b = branch
+	cp = cherry-pick
+	l = log --oneline
+	squash = rebase -i HEAD^^
+	graph = log --graph --oneline --all
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -30,4 +27,4 @@
 	process = git-lfs filter-process
 
 [include]
-    path = .gitconfig.local
+	path = .gitconfig.local
