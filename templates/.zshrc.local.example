@@ -1,0 +1,5 @@
+# Machine/work-specific zsh settings (never committed to dotfiles)
+# Examples:
+#   export WORK_API_KEY="..."
+#   export PATH="$PATH:/path/to/work/tools"
+#   alias work-vpn='...'

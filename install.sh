@@ -70,9 +70,27 @@ change_shell_to_zsh() {
     fi
 }
 
+# Copy .local template files if they don't exist
+create_local_templates() {
+    local templates_dir="$DOTFILES_DIR/templates"
+
+    for template in "$templates_dir"/*.example "$templates_dir"/.*.example; do
+        [ -e "$template" ] || continue
+        local filename
+        filename=$(basename "${template%.example}")
+        local target="$HOME/$filename"
+
+        if [ ! -f "$target" ]; then
+            cp "$template" "$target"
+            echo "Created $target from template"
+        fi
+    done
+}
+
 # Main setup
 main() {
     create_symlinks
+    create_local_templates
 
     case $OSTYPE in
         darwin*)

@@ -1,3 +1,6 @@
+# マシン固有の事情で必要な設定を ~/.zshrc.local に書いておく。存在する場合は読み込む。
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 # ssh-agent が起動していなければ起動するスクリプト
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     eval "$(ssh-agent -s)"
@@ -137,6 +140,3 @@ precmd () { vcs_info }
 #PROMPT='%F{magenta}[%~]%f %# '
 PROMPT='%F{magenta}[%~]%f${vcs_info_msg_0_} %# '
 #RPROMPT='%(?.%F{green}[OK]%f.%F{red}[NG]%f)'
-
-# マシン固有の事情で必要な設定を ~/.zshrc.local に書いておく。存在する場合は読み込む。
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local

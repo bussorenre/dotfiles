@@ -24,6 +24,9 @@ ehthumbs.db
 # Claude Code
 .claude/
 
+# Local overrides (machine/work-specific, never commit)
+*.local
+
 # Engineering Impact Score
 # https://github.com/machuz/engineering-impact-score
 eis.yaml
