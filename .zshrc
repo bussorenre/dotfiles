@@ -60,6 +60,8 @@ alias sad='ssh-add ~/.ssh/github.com/id_rsa'
 alias wip='git add . && git commit -m "wip"'
 alias p3='python3'
 alias be='bundle exec'
+alias sonnet='claude --model sonnet'
+alias fable='claude --model fable'
 
 # language settings
 export LANG=ja_JP.UTF-8
