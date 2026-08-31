@@ -61,6 +61,9 @@ alias fable='claude --model fable'
 # language settings
 export LANG=ja_JP.UTF-8
 
+# mise
+eval "$(mise activate zsh)"
+
 # for Ruby Environment
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
@@ -72,9 +75,6 @@ fi
 
 # オレオレコマンドへのパス通し
 export PATH="$HOME/dotfiles/bin:$PATH"
-
-# pyenv 用のパス通し
-export PATH="$HOME/.pyenv/shims:$PATH"
 
 # pnpm へのパス通し
 export PNPM_HOME="$HOME/.local/share/pnpm"
