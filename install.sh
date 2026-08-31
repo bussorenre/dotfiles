@@ -2,7 +2,7 @@
 set -e
 
 DOTFILES_DIR="$HOME/dotfiles"
-PACKAGES=("gh" "rbenv" "ruby-build" "emacs" "zsh" "tmux" "terraform" "docker" "go" "pyenv")
+PACKAGES=("gh" "rbenv" "ruby-build" "emacs" "zsh" "tmux" "terraform" "docker" "go" "pyenv" "opam")
 LINUX_PACKAGES=("xclip")
 
 # Create symlinks for dotfiles
