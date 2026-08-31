@@ -11,5 +11,3 @@ My configure files on
 * Emacs
 * Git
 * zsh
-* tmux
-

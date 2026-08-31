@@ -106,19 +106,6 @@ funcs()
     COMPREPLY=(`global -c $cur`)
 }
 
-# tmux セッションを自動的に立ち上げる。
-function tmux() {
-    if [[ ! -n $TMUX ]]; then
-        # get the IDs
-        ID="`tmux list-sessions`"
-        if [[ -z "$ID" ]]; then
-            tmux new-session
-        fi
-        ID="`echo $ID | cut -d: -f1`"
-        tmux attach-session -t "$ID"
-    fi
-}
-
 # zsh options
 setopt AUTO_CD      # Type directory name to cd
 setopt CORRECT      # Command correction
